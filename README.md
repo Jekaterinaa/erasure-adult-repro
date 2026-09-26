@@ -11,6 +11,12 @@ The short answer is yes. Utility and efficacy reproduce closely. Runtimes don't,
 - ERASURE at commit [`d5bbbe5`](https://github.com/aiim-research/ERASURE/tree/d5bbbe59365dec761d98bbc4427d2585d0dc1d63) (tagged "CIKM")
 - Config `configs/benchmark/tabular/adult/fs_05/adult_1mlp_05%_seed0.jsonc`: a one-layer MLP on the UCI Adult dataset, 5% of the training set to forget, seed 0
 
+## Data
+
+The dataset isn't in this repo because it doesn't need to be. The benchmark config uses ERASURE's UCI data source, which downloads Adult (Becker & Kohavi, 1996, UCI Machine Learning Repository, dataset id 2) through the `ucimlrepo` package the first time it runs. The splits are made inside the config: 80/20 train/test, then 5% of the training set as the forget set and the rest as the retain set, all seeded with seed 0. Running the same config should give you the same splits.
+
+## The run
+
 One config is actually 38 runs. It trains the original model and a Gold model (retrained from scratch on the retain set only), then runs 12 unlearning methods at 3 settings each. The paper reports the best setting per method. The whole thing took 68 min 20 s.
 
 ## Getting it running on ARM
