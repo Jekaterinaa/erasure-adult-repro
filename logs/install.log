@@ -1,0 +1,157 @@
+--- installing ---
+numpy
+scikit-learn
+matplotlib
+torch_geometric
+picologging==0.9.2
+jsonc_parser
+jsonpickle
+pandas
+PyYAML
+gdown
+python_papi; sys_platform != 'darwin'
+datasets
+transformers
+ucimlrepo
+Requirement already satisfied: numpy in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 1)) (2.5.2)
+Requirement already satisfied: scikit-learn in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 2)) (1.9.1)
+Collecting matplotlib (from -r /tmp/req_no_torch.txt (line 3))
+  Downloading matplotlib-3.11.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (80 kB)
+Collecting torch_geometric (from -r /tmp/req_no_torch.txt (line 4))
+  Downloading torch_geometric-2.8.0.post1-py3-none-any.whl.metadata (64 kB)
+Collecting picologging==0.9.2 (from -r /tmp/req_no_torch.txt (line 5))
+  Downloading picologging-0.9.2.tar.gz (79 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting jsonc_parser (from -r /tmp/req_no_torch.txt (line 6))
+  Downloading jsonc_parser-1.1.5-py3-none-any.whl.metadata (5.5 kB)
+Collecting jsonpickle (from -r /tmp/req_no_torch.txt (line 7))
+  Downloading jsonpickle-4.1.2-py3-none-any.whl.metadata (8.1 kB)
+Requirement already satisfied: pandas in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 8)) (3.0.6)
+Requirement already satisfied: PyYAML in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 9)) (6.0.3)
+Collecting gdown (from -r /tmp/req_no_torch.txt (line 10))
+  Downloading gdown-6.4.0-py3-none-any.whl.metadata (11 kB)
+Collecting python_papi (from -r /tmp/req_no_torch.txt (line 11))
+  Downloading python_papi-6.0.0.2.tar.gz (4.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 16.1 MB/s  0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: datasets in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 12)) (5.0.1)
+Requirement already satisfied: transformers in ~/envs/erasure/lib/python3.12/site-packages (from -r /tmp/req_no_torch.txt (line 13)) (5.17.0)
+Collecting ucimlrepo (from -r /tmp/req_no_torch.txt (line 14))
+  Downloading ucimlrepo-0.0.7-py3-none-any.whl.metadata (5.5 kB)
+Requirement already satisfied: scipy>=1.10.0 in ~/envs/erasure/lib/python3.12/site-packages (from scikit-learn->-r /tmp/req_no_torch.txt (line 2)) (1.18.1)
+Requirement already satisfied: joblib>=1.4.0 in ~/envs/erasure/lib/python3.12/site-packages (from scikit-learn->-r /tmp/req_no_torch.txt (line 2)) (1.6.0)
+Requirement already satisfied: narwhals>=2.0.1 in ~/envs/erasure/lib/python3.12/site-packages (from scikit-learn->-r /tmp/req_no_torch.txt (line 2)) (2.26.0)
+Requirement already satisfied: threadpoolctl>=3.5.0 in ~/envs/erasure/lib/python3.12/site-packages (from scikit-learn->-r /tmp/req_no_torch.txt (line 2)) (3.7.0)
+Collecting contourpy>=1.0.1 (from matplotlib->-r /tmp/req_no_torch.txt (line 3))
+  Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (3.8 kB)
+Collecting cycler>=0.10 (from matplotlib->-r /tmp/req_no_torch.txt (line 3))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.28.2 (from matplotlib->-r /tmp/req_no_torch.txt (line 3))
+  Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl.metadata (125 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib->-r /tmp/req_no_torch.txt (line 3))
+  Downloading kiwisolver-1.5.1-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl.metadata (5.2 kB)
+Requirement already satisfied: packaging>=20.0 in ~/envs/erasure/lib/python3.12/site-packages (from matplotlib->-r /tmp/req_no_torch.txt (line 3)) (26.3)
+Requirement already satisfied: pillow>=9 in ~/envs/erasure/lib/python3.12/site-packages (from matplotlib->-r /tmp/req_no_torch.txt (line 3)) (12.3.0)
+Collecting pyparsing>=3 (from matplotlib->-r /tmp/req_no_torch.txt (line 3))
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Requirement already satisfied: python-dateutil>=2.7 in ~/envs/erasure/lib/python3.12/site-packages (from matplotlib->-r /tmp/req_no_torch.txt (line 3)) (2.9.0.post0)
+Requirement already satisfied: aiohttp in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (3.14.3)
+Requirement already satisfied: fsspec in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (2026.6.0)
+Requirement already satisfied: jinja2 in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (3.1.6)
+Requirement already satisfied: psutil>=5.8.0 in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (7.2.2)
+Requirement already satisfied: requests in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (2.34.2)
+Requirement already satisfied: tqdm in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (4.70.1)
+Requirement already satisfied: xxhash in ~/envs/erasure/lib/python3.12/site-packages (from torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (4.0.1)
+Collecting beautifulsoup4 (from gdown->-r /tmp/req_no_torch.txt (line 10))
+  Downloading beautifulsoup4-4.15.0-py3-none-any.whl.metadata (3.8 kB)
+Requirement already satisfied: filelock in ~/envs/erasure/lib/python3.12/site-packages (from gdown->-r /tmp/req_no_torch.txt (line 10)) (3.32.3)
+Requirement already satisfied: urllib3 in ~/envs/erasure/lib/python3.12/site-packages (from gdown->-r /tmp/req_no_torch.txt (line 10)) (2.8.0)
+Collecting cffi>=1.0.0 (from python_papi->-r /tmp/req_no_torch.txt (line 11))
+  Using cached cffi-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl.metadata (2.5 kB)
+Requirement already satisfied: pyarrow>=21.0.0 in ~/envs/erasure/lib/python3.12/site-packages (from datasets->-r /tmp/req_no_torch.txt (line 12)) (25.0.1)
+Requirement already satisfied: dill<0.4.2,>=0.3.0 in ~/envs/erasure/lib/python3.12/site-packages (from datasets->-r /tmp/req_no_torch.txt (line 12)) (0.4.1)
+Requirement already satisfied: httpx<1.0.0 in ~/envs/erasure/lib/python3.12/site-packages (from datasets->-r /tmp/req_no_torch.txt (line 12)) (0.28.1)
+Requirement already satisfied: multiprocess<0.70.20 in ~/envs/erasure/lib/python3.12/site-packages (from datasets->-r /tmp/req_no_torch.txt (line 12)) (0.70.19)
+Requirement already satisfied: huggingface-hub<2.0,>=0.25.0 in ~/envs/erasure/lib/python3.12/site-packages (from datasets->-r /tmp/req_no_torch.txt (line 12)) (1.32.0)
+Requirement already satisfied: anyio in ~/envs/erasure/lib/python3.12/site-packages (from httpx<1.0.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (4.15.1)
+Requirement already satisfied: certifi in ~/envs/erasure/lib/python3.12/site-packages (from httpx<1.0.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in ~/envs/erasure/lib/python3.12/site-packages (from httpx<1.0.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (1.0.9)
+Requirement already satisfied: idna in ~/envs/erasure/lib/python3.12/site-packages (from httpx<1.0.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (3.20)
+Requirement already satisfied: h11>=0.16 in ~/envs/erasure/lib/python3.12/site-packages (from httpcore==1.*->httpx<1.0.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (0.16.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in ~/envs/erasure/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.25.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (8.5.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.2 in ~/envs/erasure/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.25.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (1.6.0)
+Requirement already satisfied: typing-extensions>=4.1.0 in ~/envs/erasure/lib/python3.12/site-packages (from huggingface-hub<2.0,>=0.25.0->datasets->-r /tmp/req_no_torch.txt (line 12)) (4.16.0)
+Requirement already satisfied: regex>=2025.10.22 in ~/envs/erasure/lib/python3.12/site-packages (from transformers->-r /tmp/req_no_torch.txt (line 13)) (2026.9.10)
+Requirement already satisfied: tokenizers<0.24.0,>=0.23.1 in ~/envs/erasure/lib/python3.12/site-packages (from transformers->-r /tmp/req_no_torch.txt (line 13)) (0.23.2)
+Requirement already satisfied: typer in ~/envs/erasure/lib/python3.12/site-packages (from transformers->-r /tmp/req_no_torch.txt (line 13)) (0.27.2)
+Requirement already satisfied: safetensors>=0.8.0 in ~/envs/erasure/lib/python3.12/site-packages (from transformers->-r /tmp/req_no_torch.txt (line 13)) (0.8.0)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (6.9.0)
+Requirement already satisfied: propcache>=0.2.0 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in ~/envs/erasure/lib/python3.12/site-packages (from aiohttp->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (1.25.1)
+Collecting pycparser (from cffi>=1.0.0->python_papi->-r /tmp/req_no_torch.txt (line 11))
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: cloudpickle>=3.0 in ~/envs/erasure/lib/python3.12/site-packages (from joblib>=1.4.0->scikit-learn->-r /tmp/req_no_torch.txt (line 2)) (3.1.2)
+Requirement already satisfied: six>=1.5 in ~/envs/erasure/lib/python3.12/site-packages (from python-dateutil>=2.7->matplotlib->-r /tmp/req_no_torch.txt (line 3)) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in ~/envs/erasure/lib/python3.12/site-packages (from requests->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (3.5.1)
+Collecting soupsieve>=1.6.1 (from beautifulsoup4->gdown->-r /tmp/req_no_torch.txt (line 10))
+  Downloading soupsieve-2.9.2-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in ~/envs/erasure/lib/python3.12/site-packages (from jinja2->torch_geometric->-r /tmp/req_no_torch.txt (line 4)) (3.0.3)
+Collecting PySocks!=1.5.7,>=1.5.6 (from requests[socks]->gdown->-r /tmp/req_no_torch.txt (line 10))
+  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: shellingham>=1.3.0 in ~/envs/erasure/lib/python3.12/site-packages (from typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in ~/envs/erasure/lib/python3.12/site-packages (from typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (15.0.0)
+Requirement already satisfied: annotated-doc>=0.0.2 in ~/envs/erasure/lib/python3.12/site-packages (from typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (0.0.5)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ~/envs/erasure/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ~/envs/erasure/lib/python3.12/site-packages (from rich>=13.8.0->typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in ~/envs/erasure/lib/python3.12/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers->-r /tmp/req_no_torch.txt (line 13)) (0.1.2)
+Downloading matplotlib-3.11.2-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (10.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 57.7 MB/s  0:00:00
+Downloading torch_geometric-2.8.0.post1-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 45.5 MB/s  0:00:00
+Downloading jsonc_parser-1.1.5-py3-none-any.whl (5.7 kB)
+Downloading jsonpickle-4.1.2-py3-none-any.whl (47 kB)
+Downloading gdown-6.4.0-py3-none-any.whl (50 kB)
+Downloading ucimlrepo-0.0.7-py3-none-any.whl (8.0 kB)
+Using cached cffi-2.1.1-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.whl (222 kB)
+Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (356 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.65.0-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl (5.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 52.0 MB/s  0:00:00
+Downloading kiwisolver-1.5.1-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 43.6 MB/s  0:00:00
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Downloading beautifulsoup4-4.15.0-py3-none-any.whl (109 kB)
+Downloading soupsieve-2.9.2-py3-none-any.whl (37 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Building wheels for collected packages: picologging, python_papi
+  Building wheel for picologging (pyproject.toml): started
+  Building wheel for picologging (pyproject.toml): finished with status 'done'
+  Created wheel for picologging: filename=picologging-0.9.2-cp312-cp312-linux_aarch64.whl size=122991 sha256=ea7398adddb477127e866daefcb979128423fdde8a8496880a1734d8aef056d3
+  Stored in directory: ~/.cache/pip/wheels/5b/1a/98/5f006cb409374929f8b812366188b01db4be2e3ac24793ef35
+  Building wheel for python_papi (pyproject.toml): started
+  Building wheel for python_papi (pyproject.toml): finished with status 'done'
+  Created wheel for python_papi: filename=python_papi-6.0.0.2-cp312-cp312-linux_aarch64.whl size=494950 sha256=3799c73c1d46173fc28229d9e32a3bda46951e9f1cfcc3e846746ed33305fd94
+  Stored in directory: ~/.cache/pip/wheels/b1/1a/e4/f3c0db10583513a107592b7a959b6f8c323937e8d9d3f2c412
+Successfully built picologging python_papi
+Installing collected packages: soupsieve, PySocks, pyparsing, pycparser, picologging, kiwisolver, jsonpickle, jsonc_parser, fonttools, cycler, contourpy, matplotlib, cffi, beautifulsoup4, ucimlrepo, torch_geometric, python_papi, gdown
+
+Successfully installed PySocks-1.7.1 beautifulsoup4-4.15.0 cffi-2.1.1 contourpy-1.4.0 cycler-0.12.1 fonttools-4.65.0 gdown-6.4.0 jsonc_parser-1.1.5 jsonpickle-4.1.2 kiwisolver-1.5.1 matplotlib-3.11.2 picologging-0.9.2 pycparser-3.0 pyparsing-3.3.2 python_papi-6.0.0.2 soupsieve-2.9.2 torch_geometric-2.8.0.post1 ucimlrepo-0.0.7
+--- exit: 0 ---
+torch 2.14.0+cu130 cuda True

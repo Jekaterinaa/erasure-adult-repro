@@ -1,0 +1,1658 @@
+=== start 2026-09-20T15:17:30+03:00 ===
+~/envs/erasure/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+2026-09-20 15:17:35,-1094706896 | INFO | 947988 - Creating Global Context for: configs/benchmark/tabular/adult/fs_05/adult_1mlp_05%_seed0.jsonc
+2026-09-20 15:17:35,-1094706890 | INFO | 947988 - Setting seeds to: 0
+2026-09-20 15:17:35,-1094706884 | INFO | 947988 - [91mCaching System: True.[0m
+2026-09-20 15:17:38,-1094703720 | INFO | 947988 - Created Configurable: erasure.data.data_sources.UCIRepositoryDataSource.UCI_Adult_DataSource
+2026-09-20 15:17:38,-1094703720 | INFO | 947988 - {'class': 'erasure.data.data_sources.UCIRepositoryDataSource.UCI_Adult_DataSource', 'parameters': {'id': 2, 'label': 'income', 'to_encode': ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country'], 'preprocess': [], 'data_columns': []}}
+2026-09-20 15:17:42,-1094699953 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - ['all', 'all_shuffled', '-']
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition all has 48842 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition all_shuffled has 48842 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition - has 0 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - ['all', 'all_shuffled', '-', 'train', 'test']
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition all has 48842 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition all_shuffled has 48842 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition - has 0 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition train has 39073 samples
+2026-09-20 15:17:42,-1094699864 | INFO | 947988 - Partition test has 9769 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - ['all', 'all_shuffled', '-', 'train', 'test', 'forget', 'retain']
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition all has 48842 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition all_shuffled has 48842 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition - has 0 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition train has 39073 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition test has 9769 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition forget has 1953 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Partition retain has 37120 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - ['all', 'all_shuffled', '-', 'train', 'test', 'forget', 'retain']
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   all: 48842 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   all_shuffled: 48842 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   -: 0 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   train: 39073 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   test: 9769 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   forget: 1953 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 -   retain: 37120 samples
+2026-09-20 15:17:42,-1094699863 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:17:42,-1094699858 | INFO | 947988 - Instantiating: erasure.model.classifiers.standard_classifier.AdultNN
+2026-09-20 15:17:42,-1094699855 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:17:42,-1094699855 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 15:17:42,-1094699435 | INFO | 947988 - TRAINING WITH 39073 samples
+2026-09-20 15:18:21,-1094660776 | INFO | 947988 - epoch = 0 ---> loss = 0.3331	 accuracy = 0.8446
+2026-09-20 15:18:59,-1094622895 | INFO | 947988 - epoch = 1 ---> loss = 0.3082	 accuracy = 0.8566
+2026-09-20 15:18:59,-1094622895 | INFO | 947988 - TorchModel trained on cuda in: 76.54049801826477 secs
+2026-09-20 15:18:59,-1094622894 | INFO | 947988 - [91mDumped Instance to: [4mresources/cached/erasure.model.classifiers.standard_classifier.AdultNN-108a20c2b50daa09a82b858a27988177[0m
+2026-09-20 15:18:59,-1094622876 | INFO | 947988 - Created Configurable: erasure.model.TorchModel.TorchModel
+2026-09-20 15:18:59,-1094622876 | INFO | 947988 - Global Predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3ea21e0>
+2026-09-20 15:18:59,-1094622708 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Identity
+2026-09-20 15:18:59,-1094622543 | INFO | 947988 - Created Configurable: erasure.unlearners.GoldModel.GoldModel
+2026-09-20 15:19:00,-1094622377 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094622377 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:00,-1094622211 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094622211 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:00,-1094622045 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094622045 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:00,-1094621879 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094621877 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:00,-1094621710 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094621708 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:00,-1094621530 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:00,-1094621527 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:01,-1094621353 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094621352 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:01,-1094621186 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094621186 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:01,-1094621020 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094621020 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:01,-1094620852 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094620852 | INFO | 947988 - Created Configurable: erasure.unlearners.eu_k.eu_k
+2026-09-20 15:19:01,-1094620687 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094620687 | INFO | 947988 - Created Configurable: erasure.unlearners.eu_k.eu_k
+2026-09-20 15:19:01,-1094620521 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:01,-1094620521 | INFO | 947988 - Created Configurable: erasure.unlearners.eu_k.eu_k
+2026-09-20 15:19:02,-1094620354 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094620354 | INFO | 947988 - Created Configurable: erasure.unlearners.NegGrad.NegGrad
+2026-09-20 15:19:02,-1094620188 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094620188 | INFO | 947988 - Created Configurable: erasure.unlearners.NegGrad.NegGrad
+2026-09-20 15:19:02,-1094620022 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094620022 | INFO | 947988 - Created Configurable: erasure.unlearners.NegGrad.NegGrad
+2026-09-20 15:19:02,-1094619856 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094619856 | INFO | 947988 - Created Configurable: erasure.unlearners.AdvancedNegGrad.AdvancedNegGrad
+2026-09-20 15:19:02,-1094619690 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094619690 | INFO | 947988 - Created Configurable: erasure.unlearners.AdvancedNegGrad.AdvancedNegGrad
+2026-09-20 15:19:02,-1094619524 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:02,-1094619524 | INFO | 947988 - Created Configurable: erasure.unlearners.AdvancedNegGrad.AdvancedNegGrad
+2026-09-20 15:19:03,-1094619345 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619345 | INFO | 947988 - Created Configurable: erasure.unlearners.UNSIR.UNSIR
+2026-09-20 15:19:03,-1094619345 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619345 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:03,-1094619344 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:03,-1094619177 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619177 | INFO | 947988 - Created Configurable: erasure.unlearners.UNSIR.UNSIR
+2026-09-20 15:19:03,-1094619177 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619177 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:03,-1094619177 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:03,-1094619011 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619011 | INFO | 947988 - Created Configurable: erasure.unlearners.UNSIR.UNSIR
+2026-09-20 15:19:03,-1094619011 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094619011 | INFO | 947988 - Created Configurable: erasure.unlearners.Finetuning.Finetuning
+2026-09-20 15:19:03,-1094619011 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:03,-1094618844 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094618844 | INFO | 947988 - Created Configurable: erasure.unlearners.BadTeaching.BadTeaching
+2026-09-20 15:19:03,-1094618677 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094618677 | INFO | 947988 - Created Configurable: erasure.unlearners.BadTeaching.BadTeaching
+2026-09-20 15:19:03,-1094618511 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:03,-1094618511 | INFO | 947988 - Created Configurable: erasure.unlearners.BadTeaching.BadTeaching
+2026-09-20 15:19:04,-1094618344 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:04,-1094618344 | INFO | 947988 - Created Configurable: erasure.unlearners.Scrub.Scrub
+2026-09-20 15:19:04,-1094618177 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:04,-1094618177 | INFO | 947988 - Created Configurable: erasure.unlearners.Scrub.Scrub
+2026-09-20 15:19:04,-1094618010 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:04,-1094618010 | INFO | 947988 - Created Configurable: erasure.unlearners.Scrub.Scrub
+2026-09-20 15:19:04,-1094617843 | INFO | 947988 - Created Configurable: erasure.unlearners.FisherForgetting.FisherForgetting
+2026-09-20 15:19:04,-1094617676 | INFO | 947988 - Created Configurable: erasure.unlearners.FisherForgetting.FisherForgetting
+2026-09-20 15:19:04,-1094617509 | INFO | 947988 - Created Configurable: erasure.unlearners.FisherForgetting.FisherForgetting
+2026-09-20 15:19:05,-1094617330 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:05,-1094617330 | INFO | 947988 - Created Configurable: erasure.unlearners.SelectiveSynapticDampening.SelectiveSynapticDampening
+2026-09-20 15:19:05,-1094616748 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:05,-1094616747 | INFO | 947988 - Created Configurable: erasure.unlearners.SelectiveSynapticDampening.SelectiveSynapticDampening
+2026-09-20 15:19:05,-1094616578 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:05,-1094616578 | INFO | 947988 - Created Configurable: erasure.unlearners.SelectiveSynapticDampening.SelectiveSynapticDampening
+2026-09-20 15:19:06,-1094616410 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616399 | INFO | 947988 - Created Configurable: erasure.unlearners.SaliencyMapGeneration.SaliencyMapGeneration
+2026-09-20 15:19:06,-1094616399 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616396 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:06,-1094616396 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:06,-1094616226 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616226 | INFO | 947988 - Created Configurable: erasure.unlearners.SaliencyMapGeneration.SaliencyMapGeneration
+2026-09-20 15:19:06,-1094616226 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616224 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:06,-1094616224 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:06,-1094616057 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616057 | INFO | 947988 - Created Configurable: erasure.unlearners.SaliencyMapGeneration.SaliencyMapGeneration
+2026-09-20 15:19:06,-1094616057 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:06,-1094616055 | INFO | 947988 - Created Configurable: erasure.unlearners.SuccessiveRandomLabels.SuccessiveRandomLabels
+2026-09-20 15:19:06,-1094616055 | INFO | 947988 - Created Configurable: erasure.unlearners.composite.Cascade
+2026-09-20 15:19:06,-1094616052 | INFO | 947988 - Created Configurable: erasure.evaluations.running.RunTime
+2026-09-20 15:19:06,-1094616050 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616049 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616049 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616049 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616048 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616048 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616048 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616048 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616047 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616047 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616047 | INFO | 947988 - Function: <function accuracy_score at 0xee67e54c6840>
+2026-09-20 15:19:06,-1094616047 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616047 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.AUS
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Function: <function f1_score at 0xee67e54c7100>
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Function: <function f1_score at 0xee67e54c7100>
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Function: <function f1_score at 0xee67e54c7100>
+2026-09-20 15:19:06,-1094616046 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094616045 | INFO | 947988 - Function: <function f1_score at 0xee67e54c7100>
+2026-09-20 15:19:06,-1094616045 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.TorchSKLearn
+2026-09-20 15:19:06,-1094615996 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 15:19:06,-1094615996 | INFO | 947988 - Created Configurable: erasure.evaluations.MIA.umia.Attack
+2026-09-20 15:19:06,-1094615996 | INFO | 947988 - Created Configurable: erasure.evaluations.measures.SaveValues
+2026-09-20 15:19:06,-1094615996 | INFO | 947988 - Created Configurable: erasure.evaluations.manager.Evaluator
+2026-09-20 15:19:06,-1094615996 | INFO | 947988 - [92m####		 Evaluating Unlearner Identity 		####[0m
+2026-09-20 15:19:06,-1094615822 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3ffe450>
+2026-09-20 15:19:09,-1094612920 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f38c20>
+2026-09-20 15:19:12,-1094610349 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e52da450>
+2026-09-20 15:19:12,-1094609811 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b39b50>
+2026-09-20 15:19:13,-1094609287 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e52da450>
+2026-09-20 15:19:22,-1094599687 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b39b80>
+2026-09-20 15:19:32,-1094590140 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e52da450>
+2026-09-20 15:19:38,-1094584375 | INFO | 947988 - Adaptive Unlearning Score: 0.9995483426359417
+2026-09-20 15:19:40,-1094581648 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b3a480>
+2026-09-20 15:19:43,-1094579065 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e52da450>
+2026-09-20 15:19:43,-1094578472 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e4e0dfa0>
+2026-09-20 15:19:44,-1094577943 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e52da450>
+2026-09-20 15:19:44,-1094577902 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:19:48,-1094574324 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:19:48,-1094574324 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:19:48,-1094574323 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:19:48,-1094574309 | INFO | 947988 - Creating attack model
+2026-09-20 15:19:48,-1094574295 | INFO | 947988 - UMIA accuracy: 0.500224
+2026-09-20 15:19:48,-1094574295 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:19:48,-1094574008 | INFO | 947988 - [92m####		 Evaluating Unlearner GoldModel 		####[0m
+2026-09-20 15:19:48,-1094573970 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5256ab0>
+2026-09-20 15:19:48,-1094573970 | INFO | 947988 - Instantiating: erasure.model.classifiers.standard_classifier.AdultNN
+2026-09-20 15:19:48,-1094573969 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 15:19:48,-1094573969 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 15:20:26,-1094536016 | INFO | 947988 - epoch = 0 ---> loss = 0.3381	 accuracy = 0.8387
+2026-09-20 15:21:05,-1094497159 | INFO | 947988 - epoch = 1 ---> loss = 0.3088	 accuracy = 0.8561
+2026-09-20 15:21:05,-1094497090 | INFO | 947988 - TorchModel trained on cuda in: 76.8693618774414 secs
+2026-09-20 15:21:05,-1094497089 | INFO | 947988 - Created Configurable: erasure.model.TorchModel.TorchModel
+2026-09-20 15:21:07,-1094494479 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8530044016787798 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b59d60>
+2026-09-20 15:21:10,-1094491920 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e557d2e0>
+2026-09-20 15:21:11,-1094491363 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8499743983614951 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b59d60>
+2026-09-20 15:21:11,-1094490868 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e557d2e0>
+2026-09-20 15:21:21,-1094481404 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8565193965517242 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b59b80>
+2026-09-20 15:21:30,-1094472009 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e557d2e0>
+2026-09-20 15:21:36,-1094466391 | INFO | 947988 - Adaptive Unlearning Score: 0.9968770944740323
+2026-09-20 15:21:38,-1094463775 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7935963185909041 of <erasure.model.TorchModel.TorchModel object at 0xee67e54b8950>
+2026-09-20 15:21:41,-1094461206 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e557d2e0>
+2026-09-20 15:21:41,-1094460643 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7930929374938758 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b59a00>
+2026-09-20 15:21:42,-1094460136 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e557d2e0>
+2026-09-20 15:21:42,-1094460097 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:21:45,-1094456674 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:21:45,-1094456674 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:21:45,-1094456673 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:21:45,-1094456659 | INFO | 947988 - Creating attack model
+2026-09-20 15:21:45,-1094456638 | INFO | 947988 - UMIA accuracy: 0.49638400000000005
+2026-09-20 15:21:45,-1094456638 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:21:46,-1094456140 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:21:46,-1094456100 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5279f70>
+2026-09-20 15:21:46,-1094456100 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:22:26,-1094416065 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3067
+2026-09-20 15:22:29,-1094413372 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8523902139420616 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72d50>
+2026-09-20 15:22:31,-1094410627 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e4f83650>
+2026-09-20 15:22:32,-1094410024 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8545826932923707 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c73800>
+2026-09-20 15:22:32,-1094409511 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e4f83650>
+2026-09-20 15:22:42,-1094399589 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.858917025862069 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b770>
+2026-09-20 15:22:52,-1094389968 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e4f83650>
+2026-09-20 15:22:58,-1094384309 | INFO | 947988 - Adaptive Unlearning Score: 0.9970973323291153
+2026-09-20 15:23:00,-1094381695 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7926059167647478 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c73950>
+2026-09-20 15:23:03,-1094379135 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e4f83650>
+2026-09-20 15:23:03,-1094378572 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7990012611071651 of <erasure.model.TorchModel.TorchModel object at 0xee67e51ebef0>
+2026-09-20 15:23:04,-1094378058 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e4f83650>
+2026-09-20 15:23:04,-1094378018 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:23:07,-1094374598 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:23:07,-1094374598 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:23:07,-1094374597 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:23:07,-1094374575 | INFO | 947988 - Creating attack model
+2026-09-20 15:23:07,-1094374559 | INFO | 947988 - UMIA accuracy: 0.5002880000000001
+2026-09-20 15:23:07,-1094374558 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:23:08,-1094374103 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:23:08,-1094374063 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5298a10>
+2026-09-20 15:23:08,-1094374063 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:23:48,-1094334399 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3039
+2026-09-20 15:23:50,-1094331656 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8545398710205753 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72540>
+2026-09-20 15:23:53,-1094329099 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e52d87a0>
+2026-09-20 15:23:53,-1094328548 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8607270865335381 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c73680>
+2026-09-20 15:23:54,-1094328013 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e52d87a0>
+2026-09-20 15:24:04,-1094318286 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8583243534482758 of <erasure.model.TorchModel.TorchModel object at 0xee67e508a540>
+2026-09-20 15:24:13,-1094308920 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e52d87a0>
+2026-09-20 15:24:19,-1094303278 | INFO | 947988 - Adaptive Unlearning Score: 0.9952751230380819
+2026-09-20 15:24:21,-1094300671 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7912847775847405 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c73500>
+2026-09-20 15:24:24,-1094298124 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e52d87a0>
+2026-09-20 15:24:24,-1094297563 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8036460412508317 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be0740>
+2026-09-20 15:24:25,-1094297056 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e52d87a0>
+2026-09-20 15:24:25,-1094297017 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:24:28,-1094293561 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:24:28,-1094293561 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:24:28,-1094293560 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:24:28,-1094293541 | INFO | 947988 - Creating attack model
+2026-09-20 15:24:28,-1094293527 | INFO | 947988 - UMIA accuracy: 0.49772800000000006
+2026-09-20 15:24:28,-1094293527 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:24:29,-1094293143 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:24:29,-1094293107 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5299100>
+2026-09-20 15:24:29,-1094293107 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:25:09,-1094253377 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3044
+2026-09-20 15:25:11,-1094250689 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8545398710205753 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf37a0>
+2026-09-20 15:25:14,-1094248086 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e5257c50>
+2026-09-20 15:25:14,-1094247500 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8607270865335381 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf1fd0>
+2026-09-20 15:25:15,-1094246952 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e5257c50>
+2026-09-20 15:25:25,-1094237381 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8579471982758621 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9fa10>
+2026-09-20 15:25:34,-1094228065 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e5257c50>
+2026-09-20 15:25:40,-1094222359 | INFO | 947988 - Adaptive Unlearning Score: 0.9952751230380819
+2026-09-20 15:25:42,-1094219733 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7905380262817816 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9e210>
+2026-09-20 15:25:45,-1094217135 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e5257c50>
+2026-09-20 15:25:45,-1094216592 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.80333957257262 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf0260>
+2026-09-20 15:25:46,-1094216081 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e5257c50>
+2026-09-20 15:25:46,-1094216041 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:25:49,-1094212606 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:25:49,-1094212606 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:25:49,-1094212606 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:25:49,-1094212588 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:25:49,-1094212588 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:25:49,-1094212588 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:25:49,-1094212588 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:25:49,-1094212587 | INFO | 947988 - Creating attack model
+2026-09-20 15:25:49,-1094212572 | INFO | 947988 - UMIA accuracy: 0.49817599999999995
+2026-09-20 15:25:49,-1094212571 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:25:50,-1094212116 | INFO | 947988 - [92m####		 Evaluating Unlearner SuccessiveRandomLabels 		####[0m
+2026-09-20 15:25:50,-1094212078 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e529a450>
+2026-09-20 15:25:50,-1094212078 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 15:26:32,-1094169860 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4133
+2026-09-20 15:26:35,-1094167164 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8532091309243526 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdc590>
+2026-09-20 15:26:37,-1094164532 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8b080>
+2026-09-20 15:26:38,-1094163999 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be3fb0>
+2026-09-20 15:26:38,-1094163506 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8b080>
+2026-09-20 15:26:48,-1094154160 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8577586206896551 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdd6a0>
+2026-09-20 15:26:57,-1094144919 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8b080>
+2026-09-20 15:27:03,-1094139255 | INFO | 947988 - Adaptive Unlearning Score: 0.9997529541367081
+2026-09-20 15:27:05,-1094136641 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7939473340487722 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be0710>
+2026-09-20 15:27:08,-1094134127 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8b080>
+2026-09-20 15:27:08,-1094133581 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7972837022132797 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdd700>
+2026-09-20 15:27:09,-1094133067 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8b080>
+2026-09-20 15:27:09,-1094133026 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:27:12,-1094129625 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:27:12,-1094129625 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:27:12,-1094129624 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:27:12,-1094129604 | INFO | 947988 - Creating attack model
+2026-09-20 15:27:12,-1094129586 | INFO | 947988 - UMIA accuracy: 0.4966399999999999
+2026-09-20 15:27:12,-1094129586 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:27:13,-1094129207 | INFO | 947988 - [92m####		 Evaluating Unlearner SuccessiveRandomLabels 		####[0m
+2026-09-20 15:27:13,-1094129167 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e52d8b60>
+2026-09-20 15:27:13,-1094129167 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 15:27:55,-1094086966 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4334
+2026-09-20 15:27:58,-1094084339 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8548469648889344 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdc590>
+2026-09-20 15:28:00,-1094081833 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee6b37834ec0>
+2026-09-20 15:28:01,-1094081277 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8591909882232462 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdd6a0>
+2026-09-20 15:28:01,-1094080778 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee6b37834ec0>
+2026-09-20 15:28:10,-1094071637 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8585398706896552 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b39a30>
+2026-09-20 15:28:19,-1094062478 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee6b37834ec0>
+2026-09-20 15:28:25,-1094056831 | INFO | 947988 - Adaptive Unlearning Score: 0.9974074374054626
+2026-09-20 15:28:28,-1094054250 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7892201699453256 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b5f0>
+2026-09-20 15:28:30,-1094051666 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee6b37834ec0>
+2026-09-20 15:28:31,-1094051097 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8000737055463423 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5adb0>
+2026-09-20 15:28:31,-1094050584 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee6b37834ec0>
+2026-09-20 15:28:31,-1094050544 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:28:35,-1094047051 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:28:35,-1094047051 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:28:35,-1094047050 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:28:35,-1094047035 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:28:35,-1094047034 | INFO | 947988 - Creating attack model
+2026-09-20 15:28:35,-1094047016 | INFO | 947988 - UMIA accuracy: 0.4986879999999999
+2026-09-20 15:28:35,-1094047015 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:28:35,-1094046585 | INFO | 947988 - [92m####		 Evaluating Unlearner SuccessiveRandomLabels 		####[0m
+2026-09-20 15:28:35,-1094046544 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e52da0f0>
+2026-09-20 15:28:35,-1094046544 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 15:29:17,-1094004936 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4373
+2026-09-20 15:29:20,-1094002347 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8539256832838571 of <erasure.model.TorchModel.TorchModel object at 0xee67e51e9580>
+2026-09-20 15:29:22,-1093999794 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6450>
+2026-09-20 15:29:23,-1093999264 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.855094726062468 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6840>
+2026-09-20 15:29:23,-1093998764 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6450>
+2026-09-20 15:29:32,-1093989490 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8580549568965518 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de4d70>
+2026-09-20 15:29:42,-1093980198 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6450>
+2026-09-20 15:29:47,-1093974492 | INFO | 947988 - Adaptive Unlearning Score: 0.9996502830377691
+2026-09-20 15:29:50,-1093971890 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7924065731421576 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bddf40>
+2026-09-20 15:29:53,-1093969343 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6450>
+2026-09-20 15:29:53,-1093968768 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.798046598812832 of <erasure.model.TorchModel.TorchModel object at 0xee67e4e323c0>
+2026-09-20 15:29:54,-1093968258 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de6450>
+2026-09-20 15:29:54,-1093968218 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:29:57,-1093964805 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:29:57,-1093964805 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:29:57,-1093964804 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:29:57,-1093964788 | INFO | 947988 - Creating attack model
+2026-09-20 15:29:57,-1093964772 | INFO | 947988 - UMIA accuracy: 0.49907200000000007
+2026-09-20 15:29:57,-1093964772 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:29:58,-1093964325 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e52db500>
+2026-09-20 15:29:58,-1093964285 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:30:37,-1093924468 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3038
+2026-09-20 15:30:40,-1093921842 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8535162247927116 of <erasure.model.TorchModel.TorchModel object at 0xee67c05ae4b0>
+2026-09-20 15:30:43,-1093919313 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8a2d0>
+2026-09-20 15:30:43,-1093918768 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.855094726062468 of <erasure.model.TorchModel.TorchModel object at 0xee67e4de67b0>
+2026-09-20 15:30:44,-1093918249 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8a2d0>
+2026-09-20 15:30:53,-1093908936 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8581627155172413 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be13a0>
+2026-09-20 15:31:02,-1093899812 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8a2d0>
+2026-09-20 15:31:08,-1093894264 | INFO | 947988 - Adaptive Unlearning Score: 0.9988327996486258
+2026-09-20 15:31:10,-1093891697 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7924154839851252 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9f560>
+2026-09-20 15:31:13,-1093889134 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8a2d0>
+2026-09-20 15:31:13,-1093888573 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7977394497346675 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9e390>
+2026-09-20 15:31:14,-1093888057 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c8a2d0>
+2026-09-20 15:31:14,-1093888017 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:31:17,-1093884562 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:31:17,-1093884562 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:31:17,-1093884561 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:31:17,-1093884546 | INFO | 947988 - Creating attack model
+2026-09-20 15:31:17,-1093884526 | INFO | 947988 - UMIA accuracy: 0.49728000000000006
+2026-09-20 15:31:17,-1093884526 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:31:18,-1093884112 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:31:18,-1093884075 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:31:18,-1093884075 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:31:18,-1093884075 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:31:18,-1093884075 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:31:18,-1093884075 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e52db920>
+2026-09-20 15:31:18,-1093884074 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:31:57,-1093844862 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3040
+2026-09-20 15:32:00,-1093842313 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8539256832838571 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bddf40>
+2026-09-20 15:32:02,-1093839801 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7d910>
+2026-09-20 15:32:03,-1093839246 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8607270865335381 of <erasure.model.TorchModel.TorchModel object at 0xee67e50d7440>
+2026-09-20 15:32:03,-1093838733 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7d910>
+2026-09-20 15:32:12,-1093829602 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8579741379310345 of <erasure.model.TorchModel.TorchModel object at 0xee67e6773d40>
+2026-09-20 15:32:21,-1093820549 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7d910>
+2026-09-20 15:32:27,-1093814906 | INFO | 947988 - Adaptive Unlearning Score: 0.9940579281593367
+2026-09-20 15:32:30,-1093812319 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7890337386953064 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7dd0>
+2026-09-20 15:32:32,-1093809843 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7d910>
+2026-09-20 15:32:33,-1093809308 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.80333957257262 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be0770>
+2026-09-20 15:32:33,-1093808816 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7d910>
+2026-09-20 15:32:33,-1093808778 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:32:36,-1093805488 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:32:36,-1093805487 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:32:36,-1093805486 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:32:36,-1093805468 | INFO | 947988 - Creating attack model
+2026-09-20 15:32:36,-1093805448 | INFO | 947988 - UMIA accuracy: 0.49977599999999994
+2026-09-20 15:32:36,-1093805447 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:32:37,-1093805091 | INFO | 947988 - [92m####		 Evaluating Unlearner Finetuning 		####[0m
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e532cd70>
+2026-09-20 15:32:37,-1093805054 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 15:33:16,-1093765971 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3050
+2026-09-20 15:33:19,-1093763319 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8535162247927116 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b389e0>
+2026-09-20 15:33:21,-1093760703 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e068d0>
+2026-09-20 15:33:22,-1093760127 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8556067588325653 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b38b00>
+2026-09-20 15:33:22,-1093759587 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e068d0>
+2026-09-20 15:33:31,-1093750477 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8574353448275862 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c7140>
+2026-09-20 15:33:40,-1093741506 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e068d0>
+2026-09-20 15:33:46,-1093735924 | INFO | 947988 - Adaptive Unlearning Score: 0.9983224314654175
+2026-09-20 15:33:49,-1093733430 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7923501025078563 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be00b0>
+2026-09-20 15:33:51,-1093730955 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e068d0>
+2026-09-20 15:33:52,-1093730407 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7989126783601816 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bddca0>
+2026-09-20 15:33:52,-1093729900 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e068d0>
+2026-09-20 15:33:52,-1093729860 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:33:55,-1093726449 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:33:55,-1093726449 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:33:55,-1093726448 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:33:56,-1093726429 | INFO | 947988 - Creating attack model
+2026-09-20 15:33:56,-1093726410 | INFO | 947988 - UMIA accuracy: 0.503296
+2026-09-20 15:33:56,-1093726410 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:33:56,-1093726003 | INFO | 947988 - [92m####		 Evaluating Unlearner eu_k 		####[0m
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e532cd40>
+2026-09-20 15:33:56,-1093725964 | INFO | 947988 - Starting eu-2 with 10 epochs
+2026-09-20 15:33:56,-1093725941 | INFO | 947988 - Layer 2 is reset
+2026-09-20 15:34:35,-1093687113 | INFO | 947988 - eu-2 - epoch = 0 ---> var_loss = 0.3379
+2026-09-20 15:35:14,-1093648108 | INFO | 947988 - eu-2 - epoch = 1 ---> var_loss = 0.3045
+2026-09-20 15:35:52,-1093609488 | INFO | 947988 - eu-2 - epoch = 2 ---> var_loss = 0.3036
+2026-09-20 15:36:31,-1093570778 | INFO | 947988 - eu-2 - epoch = 3 ---> var_loss = 0.3032
+2026-09-20 15:37:10,-1093531820 | INFO | 947988 - eu-2 - epoch = 4 ---> var_loss = 0.3029
+2026-09-20 15:37:49,-1093493053 | INFO | 947988 - eu-2 - epoch = 5 ---> var_loss = 0.3027
+2026-09-20 15:38:28,-1093454137 | INFO | 947988 - eu-2 - epoch = 6 ---> var_loss = 0.3025
+2026-09-20 15:39:07,-1093415346 | INFO | 947988 - eu-2 - epoch = 7 ---> var_loss = 0.3024
+2026-09-20 15:39:46,-1093375914 | INFO | 947988 - eu-2 - epoch = 8 ---> var_loss = 0.3023
+2026-09-20 15:40:25,-1093337077 | INFO | 947988 - eu-2 - epoch = 9 ---> var_loss = 0.3022
+2026-09-20 15:40:28,-1093334405 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8517760262053434 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b38560>
+2026-09-20 15:40:30,-1093331692 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c3b0>
+2026-09-20 15:40:31,-1093331098 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8556067588325653 of <erasure.model.TorchModel.TorchModel object at 0xee67e5131130>
+2026-09-20 15:40:31,-1093330525 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c3b0>
+2026-09-20 15:40:41,-1093320780 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8593480603448276 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf37d0>
+2026-09-20 15:40:50,-1093311633 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c3b0>
+2026-09-20 15:40:56,-1093305996 | INFO | 947988 - Adaptive Unlearning Score: 0.9948582240454663
+2026-09-20 15:40:59,-1093303346 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7901145249201678 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c4440>
+2026-09-20 15:41:01,-1093300785 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c3b0>
+2026-09-20 15:41:02,-1093300194 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7995187687469059 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf2b40>
+2026-09-20 15:41:02,-1093299664 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c3b0>
+2026-09-20 15:41:02,-1093299619 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:41:06,-1093296145 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:41:06,-1093296145 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:41:06,-1093296144 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:41:06,-1093296129 | INFO | 947988 - Creating attack model
+2026-09-20 15:41:06,-1093296111 | INFO | 947988 - UMIA accuracy: 0.500544
+2026-09-20 15:41:06,-1093296111 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:41:06,-1093295675 | INFO | 947988 - [92m####		 Evaluating Unlearner eu_k 		####[0m
+2026-09-20 15:41:06,-1093295637 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:41:06,-1093295637 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:41:06,-1093295637 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:41:06,-1093295636 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:41:06,-1093295636 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51844d0>
+2026-09-20 15:41:06,-1093295636 | INFO | 947988 - Starting eu-2 with 10 epochs
+2026-09-20 15:41:06,-1093295634 | INFO | 947988 - Layer 2 is reset
+2026-09-20 15:41:45,-1093256707 | INFO | 947988 - eu-2 - epoch = 0 ---> var_loss = 0.5006
+2026-09-20 15:42:24,-1093217825 | INFO | 947988 - eu-2 - epoch = 1 ---> var_loss = 0.3611
+2026-09-20 15:43:03,-1093179206 | INFO | 947988 - eu-2 - epoch = 2 ---> var_loss = 0.3270
+2026-09-20 15:43:41,-1093140536 | INFO | 947988 - eu-2 - epoch = 3 ---> var_loss = 0.3143
+2026-09-20 15:44:20,-1093101528 | INFO | 947988 - eu-2 - epoch = 4 ---> var_loss = 0.3089
+2026-09-20 15:44:59,-1093062620 | INFO | 947988 - eu-2 - epoch = 5 ---> var_loss = 0.3066
+2026-09-20 15:45:38,-1093023855 | INFO | 947988 - eu-2 - epoch = 6 ---> var_loss = 0.3055
+2026-09-20 15:46:17,-1092984890 | INFO | 947988 - eu-2 - epoch = 7 ---> var_loss = 0.3050
+2026-09-20 15:46:56,-1092946066 | INFO | 947988 - eu-2 - epoch = 8 ---> var_loss = 0.3046
+2026-09-20 15:47:35,-1092906787 | INFO | 947988 - eu-2 - epoch = 9 ---> var_loss = 0.3044
+2026-09-20 15:47:38,-1092904215 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8551540587572934 of <erasure.model.TorchModel.TorchModel object at 0xee67e02cf500>
+2026-09-20 15:47:40,-1092901690 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e077a0>
+2026-09-20 15:47:41,-1092901134 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8591909882232462 of <erasure.model.TorchModel.TorchModel object at 0xee67c05ae210>
+2026-09-20 15:47:41,-1092900618 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e077a0>
+2026-09-20 15:47:51,-1092891233 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8578933189655172 of <erasure.model.TorchModel.TorchModel object at 0xee67c0781cd0>
+2026-09-20 15:48:00,-1092881805 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e077a0>
+2026-09-20 15:48:06,-1092876040 | INFO | 947988 - Adaptive Unlearning Score: 0.9980183627197022
+2026-09-20 15:48:08,-1092873475 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7899794033537666 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdf740>
+2026-09-20 15:48:11,-1092870988 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e077a0>
+2026-09-20 15:48:12,-1092870429 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7994382066528671 of <erasure.model.TorchModel.TorchModel object at 0xee67e5256240>
+2026-09-20 15:48:12,-1092869920 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e077a0>
+2026-09-20 15:48:12,-1092869875 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:48:16,-1092866402 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:48:16,-1092866402 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:48:16,-1092866401 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:48:16,-1092866385 | INFO | 947988 - Creating attack model
+2026-09-20 15:48:16,-1092866369 | INFO | 947988 - UMIA accuracy: 0.500544
+2026-09-20 15:48:16,-1092866369 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:48:16,-1092865829 | INFO | 947988 - [92m####		 Evaluating Unlearner eu_k 		####[0m
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Layer 0 is frozen
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Layer 1 is frozen
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Layer 2 is trainable
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Layer 3 is trainable
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5185940>
+2026-09-20 15:48:16,-1092865791 | INFO | 947988 - Starting eu-2 with 10 epochs
+2026-09-20 15:48:16,-1092865789 | INFO | 947988 - Layer 2 is reset
+2026-09-20 15:48:55,-1092826663 | INFO | 947988 - eu-2 - epoch = 0 ---> var_loss = 0.7196
+2026-09-20 15:49:34,-1092788042 | INFO | 947988 - eu-2 - epoch = 1 ---> var_loss = 0.6443
+2026-09-20 15:50:12,-1092749742 | INFO | 947988 - eu-2 - epoch = 2 ---> var_loss = 0.5864
+2026-09-20 15:50:51,-1092711266 | INFO | 947988 - eu-2 - epoch = 3 ---> var_loss = 0.5409
+2026-09-20 15:51:29,-1092672693 | INFO | 947988 - eu-2 - epoch = 4 ---> var_loss = 0.5042
+2026-09-20 15:52:08,-1092633931 | INFO | 947988 - eu-2 - epoch = 5 ---> var_loss = 0.4740
+2026-09-20 15:52:47,-1092595397 | INFO | 947988 - eu-2 - epoch = 6 ---> var_loss = 0.4488
+2026-09-20 15:53:25,-1092556886 | INFO | 947988 - eu-2 - epoch = 7 ---> var_loss = 0.4277
+2026-09-20 15:54:04,-1092518388 | INFO | 947988 - eu-2 - epoch = 8 ---> var_loss = 0.4098
+2026-09-20 15:54:42,-1092479618 | INFO | 947988 - eu-2 - epoch = 9 ---> var_loss = 0.3946
+2026-09-20 15:54:45,-1092477042 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8490121813901116 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70c20>
+2026-09-20 15:54:47,-1092474549 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71850>
+2026-09-20 15:54:48,-1092474020 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8494623655913979 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71100>
+2026-09-20 15:54:48,-1092473535 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71850>
+2026-09-20 15:54:58,-1092464037 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8463631465517242 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c5010>
+2026-09-20 15:55:07,-1092454627 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71850>
+2026-09-20 15:55:13,-1092448885 | INFO | 947988 - Adaptive Unlearning Score: 0.9954572759498572
+2026-09-20 15:55:16,-1092446323 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7479431449374474 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf2b10>
+2026-09-20 15:55:18,-1092443799 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71850>
+2026-09-20 15:55:19,-1092443232 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7538994993828008 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c5100>
+2026-09-20 15:55:19,-1092442718 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71850>
+2026-09-20 15:55:19,-1092442674 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:55:23,-1092439095 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:55:23,-1092439095 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:55:23,-1092439094 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:55:23,-1092439075 | INFO | 947988 - Creating attack model
+2026-09-20 15:55:23,-1092439060 | INFO | 947988 - UMIA accuracy: 0.498944
+2026-09-20 15:55:23,-1092439060 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:55:23,-1092438709 | INFO | 947988 - [92m####		 Evaluating Unlearner NegGrad 		####[0m
+2026-09-20 15:55:23,-1092438673 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51844a0>
+2026-09-20 15:55:23,-1092438672 | INFO | 947988 - Starting NegGrad with 1 epochs
+2026-09-20 15:55:25,-1092436591 | INFO | 947988 - NegGrad - epoch = 0 ---> var_loss = -0.3279
+2026-09-20 15:55:28,-1092433945 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.7634353567407104 of <erasure.model.TorchModel.TorchModel object at 0xee67e2f7c590>
+2026-09-20 15:55:31,-1092431304 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be2360>
+2026-09-20 15:55:31,-1092430729 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.7613927291346646 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b39010>
+2026-09-20 15:55:32,-1092430182 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be2360>
+2026-09-20 15:55:41,-1092420514 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.7748922413793103 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b3b680>
+2026-09-20 15:55:51,-1092411094 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be2360>
+2026-09-20 15:55:57,-1092405361 | INFO | 947988 - Adaptive Unlearning Score: 0.9084729185763153
+2026-09-20 15:55:59,-1092402728 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7325026019377288 of <erasure.model.TorchModel.TorchModel object at 0xee67e3e079e0>
+2026-09-20 15:56:02,-1092400153 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be2360>
+2026-09-20 15:56:02,-1092399574 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7321810708307732 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c71250>
+2026-09-20 15:56:03,-1092399043 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be2360>
+2026-09-20 15:56:03,-1092399000 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:56:06,-1092395509 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:56:06,-1092395509 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:56:06,-1092395508 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:56:06,-1092395493 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:56:06,-1092395492 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:56:06,-1092395492 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:56:06,-1092395492 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:56:06,-1092395492 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:56:06,-1092395492 | INFO | 947988 - Creating attack model
+2026-09-20 15:56:06,-1092395473 | INFO | 947988 - UMIA accuracy: 0.499712
+2026-09-20 15:56:06,-1092395473 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:56:07,-1092394912 | INFO | 947988 - [92m####		 Evaluating Unlearner NegGrad 		####[0m
+2026-09-20 15:56:07,-1092394874 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5187fe0>
+2026-09-20 15:56:07,-1092394874 | INFO | 947988 - Starting NegGrad with 1 epochs
+2026-09-20 15:56:09,-1092392823 | INFO | 947988 - NegGrad - epoch = 0 ---> var_loss = -0.3091
+2026-09-20 15:56:12,-1092390188 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8486027228989661 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b58950>
+2026-09-20 15:56:14,-1092387621 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678230>
+2026-09-20 15:56:15,-1092387049 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8494623655913979 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b58a40>
+2026-09-20 15:56:15,-1092386532 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678230>
+2026-09-20 15:56:25,-1092377058 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8558997844827586 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5bc20>
+2026-09-20 15:56:34,-1092367726 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678230>
+2026-09-20 15:56:40,-1092361754 | INFO | 947988 - Adaptive Unlearning Score: 0.994640920798242
+2026-09-20 15:56:43,-1092358939 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7918805602050871 of <erasure.model.TorchModel.TorchModel object at 0xee67c05ad370>
+2026-09-20 15:56:46,-1092356218 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678230>
+2026-09-20 15:56:46,-1092355620 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7966910088011263 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b3b500>
+2026-09-20 15:56:47,-1092355048 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678230>
+2026-09-20 15:56:47,-1092355004 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:56:51,-1092351336 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:56:51,-1092351336 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:56:51,-1092351335 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:56:51,-1092351314 | INFO | 947988 - Creating attack model
+2026-09-20 15:56:51,-1092351299 | INFO | 947988 - UMIA accuracy: 0.501056
+2026-09-20 15:56:51,-1092351298 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:56:51,-1092350892 | INFO | 947988 - [92m####		 Evaluating Unlearner NegGrad 		####[0m
+2026-09-20 15:56:51,-1092350857 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51e83e0>
+2026-09-20 15:56:51,-1092350857 | INFO | 947988 - Starting NegGrad with 1 epochs
+2026-09-20 15:56:53,-1092348791 | INFO | 947988 - NegGrad - epoch = 0 ---> var_loss = -0.3081
+2026-09-20 15:56:56,-1092346103 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b6cc0>
+2026-09-20 15:56:58,-1092343461 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c06780b0>
+2026-09-20 15:56:59,-1092342844 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177e30>
+2026-09-20 15:57:00,-1092342330 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c06780b0>
+2026-09-20 15:57:09,-1092333013 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8568965517241379 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdfad0>
+2026-09-20 15:57:19,-1092323240 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c06780b0>
+2026-09-20 15:57:24,-1092317434 | INFO | 947988 - Adaptive Unlearning Score: 0.9995483426359417
+2026-09-20 15:57:27,-1092314703 | INFO | 947988 - f1_macro of "test" on unlearned: 0.794404590185217 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdc3e0>
+2026-09-20 15:57:30,-1092312069 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c06780b0>
+2026-09-20 15:57:30,-1092311471 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7978863678469696 of <erasure.model.TorchModel.TorchModel object at 0xee67c05ad610>
+2026-09-20 15:57:31,-1092310920 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c06780b0>
+2026-09-20 15:57:31,-1092310875 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:57:34,-1092307452 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:57:34,-1092307452 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:57:34,-1092307451 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:57:35,-1092307431 | INFO | 947988 - Creating attack model
+2026-09-20 15:57:35,-1092307416 | INFO | 947988 - UMIA accuracy: 0.499456
+2026-09-20 15:57:35,-1092307416 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:57:35,-1092306943 | INFO | 947988 - [92m####		 Evaluating Unlearner AdvancedNegGrad 		####[0m
+2026-09-20 15:57:35,-1092306904 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51e8590>
+2026-09-20 15:57:35,-1092306904 | INFO | 947988 - Starting AdvancedNegGrad with 1 epochs
+2026-09-20 15:58:51,-1092231158 | INFO | 947988 - AdvancedNegGrad - epoch = 0 ---> var_loss = -0.3447
+2026-09-20 15:58:53,-1092228568 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.3621660354181595 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c6660>
+2026-09-20 15:58:56,-1092226035 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678710>
+2026-09-20 15:58:56,-1092225485 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.3640552995391705 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c6e10>
+2026-09-20 15:58:57,-1092224966 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678710>
+2026-09-20 15:59:06,-1092215517 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.3775323275862069 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c6480>
+2026-09-20 15:59:16,-1092206149 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678710>
+2026-09-20 15:59:21,-1092200448 | INFO | 947988 - Adaptive Unlearning Score: 0.5080993352725532
+2026-09-20 15:59:24,-1092197806 | INFO | 947988 - f1_macro of "test" on unlearned: 0.355893960751847 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b38c20>
+2026-09-20 15:59:27,-1092195208 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678710>
+2026-09-20 15:59:27,-1092194634 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.35751814377284524 of <erasure.model.TorchModel.TorchModel object at 0xee67e02ce960>
+2026-09-20 15:59:28,-1092194124 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0678710>
+2026-09-20 15:59:28,-1092194085 | INFO | 947988 - Creating attack dataset
+2026-09-20 15:59:31,-1092190622 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 15:59:31,-1092190622 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 15:59:31,-1092190621 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 15:59:31,-1092190600 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:59:31,-1092190600 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 15:59:31,-1092190600 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 15:59:31,-1092190600 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 15:59:31,-1092190600 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 -   all: 3906 samples
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 -   train: 1953 samples
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 -   test: 1953 samples
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 15:59:31,-1092190599 | INFO | 947988 - Creating attack model
+2026-09-20 15:59:31,-1092190581 | INFO | 947988 - UMIA accuracy: 0.5164799999999999
+2026-09-20 15:59:31,-1092190581 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 15:59:32,-1092190241 | INFO | 947988 - [92m####		 Evaluating Unlearner AdvancedNegGrad 		####[0m
+2026-09-20 15:59:32,-1092190203 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51eb9e0>
+2026-09-20 15:59:32,-1092190203 | INFO | 947988 - Starting AdvancedNegGrad with 1 epochs
+2026-09-20 16:00:47,-1092115166 | INFO | 947988 - AdvancedNegGrad - epoch = 0 ---> var_loss = -0.0088
+2026-09-20 16:00:49,-1092112441 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8322243832531477 of <erasure.model.TorchModel.TorchModel object at 0xee67c0781d30>
+2026-09-20 16:00:52,-1092109798 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b290>
+2026-09-20 16:00:53,-1092109257 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8274449564772145 of <erasure.model.TorchModel.TorchModel object at 0xee67c07824b0>
+2026-09-20 16:00:53,-1092108729 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b290>
+2026-09-20 16:01:03,-1092099351 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8419181034482759 of <erasure.model.TorchModel.TorchModel object at 0xee67c0781d90>
+2026-09-20 16:01:12,-1092089957 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b290>
+2026-09-20 16:01:18,-1092084376 | INFO | 947988 - Adaptive Unlearning Score: 0.9744602555142936
+2026-09-20 16:01:20,-1092081621 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7838896539526313 of <erasure.model.TorchModel.TorchModel object at 0xee67c0781b50>
+2026-09-20 16:01:23,-1092078986 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b290>
+2026-09-20 16:01:23,-1092078462 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7803928804638516 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b7d10>
+2026-09-20 16:01:24,-1092077943 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b290>
+2026-09-20 16:01:24,-1092077906 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:01:27,-1092074642 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:01:27,-1092074642 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:01:27,-1092074641 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:01:27,-1092074622 | INFO | 947988 - Creating attack model
+2026-09-20 16:01:27,-1092074610 | INFO | 947988 - UMIA accuracy: 0.49504000000000004
+2026-09-20 16:01:27,-1092074610 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:01:28,-1092074291 | INFO | 947988 - [92m####		 Evaluating Unlearner AdvancedNegGrad 		####[0m
+2026-09-20 16:01:28,-1092074255 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e51eba10>
+2026-09-20 16:01:28,-1092074255 | INFO | 947988 - Starting AdvancedNegGrad with 1 epochs
+2026-09-20 16:02:43,-1091999078 | INFO | 947988 - AdvancedNegGrad - epoch = 0 ---> var_loss = -0.0033
+2026-09-20 16:02:46,-1091996417 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8516736615825571 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdc560>
+2026-09-20 16:02:48,-1091993862 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be02c0>
+2026-09-20 16:02:49,-1091993296 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.851510496671787 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdf0e0>
+2026-09-20 16:02:49,-1091992752 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be02c0>
+2026-09-20 16:02:59,-1091983359 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8567349137931034 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdf800>
+2026-09-20 16:03:08,-1091974011 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be02c0>
+2026-09-20 16:03:14,-1091968303 | INFO | 947988 - Adaptive Unlearning Score: 0.9984039907829223
+2026-09-20 16:03:16,-1091965724 | INFO | 947988 - f1_macro of "test" on unlearned: 0.793719978600931 of <erasure.model.TorchModel.TorchModel object at 0xee67c037c710>
+2026-09-20 16:03:19,-1091963218 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be02c0>
+2026-09-20 16:03:19,-1091962665 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7968572904262493 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b396d0>
+2026-09-20 16:03:20,-1091962141 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be02c0>
+2026-09-20 16:03:20,-1091962102 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:03:23,-1091958628 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:03:23,-1091958628 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:03:23,-1091958628 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:03:23,-1091958611 | INFO | 947988 - Creating attack model
+2026-09-20 16:03:23,-1091958596 | INFO | 947988 - UMIA accuracy: 0.4959999999999999
+2026-09-20 16:03:23,-1091958596 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:03:24,-1091958286 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:03:24,-1091958248 | INFO | 947988 - Execute Sub-Unlearner: UNSIR on <erasure.model.TorchModel.TorchModel object at 0xee67e523cef0>
+2026-09-20 16:03:24,-1091958248 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e523cef0>
+2026-09-20 16:03:24,-1091958248 | INFO | 947988 - Starting UNSIR with 1 epochs for the impair phase
+2026-09-20 16:03:28,-1091953718 | INFO | 947988 - UNSIR-1 - epoch = 0 ---> var_loss = 0.0923
+2026-09-20 16:03:28,-1091953717 | INFO | 947988 - Execute Sub-Unlearner: Finetuning on <erasure.model.TorchModel.TorchModel object at 0xee67e523cef0>
+2026-09-20 16:03:28,-1091953717 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e523cef0>
+2026-09-20 16:03:28,-1091953717 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 16:04:08,-1091914414 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3120
+2026-09-20 16:04:10,-1091911879 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8534138601699253 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdf0e0>
+2026-09-20 16:04:13,-1091909381 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70a70>
+2026-09-20 16:04:13,-1091908810 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8520225294418843 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdc2f0>
+2026-09-20 16:04:14,-1091908303 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70a70>
+2026-09-20 16:04:23,-1091899159 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8580549568965518 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bddb20>
+2026-09-20 16:04:32,-1091889725 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70a70>
+2026-09-20 16:04:38,-1091883898 | INFO | 947988 - Adaptive Unlearning Score: 0.9989172695764268
+2026-09-20 16:04:41,-1091881329 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7947400954361463 of <erasure.model.TorchModel.TorchModel object at 0xee67e02cc800>
+2026-09-20 16:04:43,-1091878761 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70a70>
+2026-09-20 16:04:44,-1091878180 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7956146097113451 of <erasure.model.TorchModel.TorchModel object at 0xee67e0176de0>
+2026-09-20 16:04:44,-1091877673 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c70a70>
+2026-09-20 16:04:44,-1091877634 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:04:48,-1091874269 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:04:48,-1091874269 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:04:48,-1091874268 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:04:48,-1091874251 | INFO | 947988 - Creating attack model
+2026-09-20 16:04:48,-1091874238 | INFO | 947988 - UMIA accuracy: 0.5006079999999999
+2026-09-20 16:04:48,-1091874238 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:04:48,-1091873843 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:04:48,-1091873805 | INFO | 947988 - Execute Sub-Unlearner: UNSIR on <erasure.model.TorchModel.TorchModel object at 0xee67e523f710>
+2026-09-20 16:04:48,-1091873805 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e523f710>
+2026-09-20 16:04:48,-1091873805 | INFO | 947988 - Starting UNSIR with 1 epochs for the impair phase
+2026-09-20 16:04:53,-1091869314 | INFO | 947988 - UNSIR-1 - epoch = 0 ---> var_loss = 0.1225
+2026-09-20 16:04:53,-1091869313 | INFO | 947988 - Execute Sub-Unlearner: Finetuning on <erasure.model.TorchModel.TorchModel object at 0xee67e523f710>
+2026-09-20 16:04:53,-1091869313 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e523f710>
+2026-09-20 16:04:53,-1091869313 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 16:05:31,-1091830566 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3044
+2026-09-20 16:05:34,-1091828125 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8548469648889344 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf1fd0>
+2026-09-20 16:05:36,-1091825680 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1be0>
+2026-09-20 16:05:37,-1091825095 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8607270865335381 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf1c70>
+2026-09-20 16:05:37,-1091824557 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1be0>
+2026-09-20 16:05:46,-1091815663 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8582165948275862 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c2840>
+2026-09-20 16:05:55,-1091806546 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1be0>
+2026-09-20 16:06:01,-1091800933 | INFO | 947988 - Adaptive Unlearning Score: 0.9958842778894301
+2026-09-20 16:06:04,-1091798347 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7899850695853141 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9dc10>
+2026-09-20 16:06:06,-1091795767 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1be0>
+2026-09-20 16:06:07,-1091795188 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8024108718357679 of <erasure.model.TorchModel.TorchModel object at 0xee67e0176ea0>
+2026-09-20 16:06:07,-1091794674 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1be0>
+2026-09-20 16:06:07,-1091794635 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:06:11,-1091791272 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:06:11,-1091791272 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:06:11,-1091791272 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:06:11,-1091791257 | INFO | 947988 - Creating attack model
+2026-09-20 16:06:11,-1091791245 | INFO | 947988 - UMIA accuracy: 0.5007360000000001
+2026-09-20 16:06:11,-1091791244 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:06:11,-1091790907 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:06:11,-1091790867 | INFO | 947988 - Execute Sub-Unlearner: UNSIR on <erasure.model.TorchModel.TorchModel object at 0xee67e5088e90>
+2026-09-20 16:06:11,-1091790867 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5088e90>
+2026-09-20 16:06:11,-1091790867 | INFO | 947988 - Starting UNSIR with 1 epochs for the impair phase
+2026-09-20 16:06:16,-1091786392 | INFO | 947988 - UNSIR-1 - epoch = 0 ---> var_loss = 0.1329
+2026-09-20 16:06:16,-1091786391 | INFO | 947988 - Execute Sub-Unlearner: Finetuning on <erasure.model.TorchModel.TorchModel object at 0xee67e5088e90>
+2026-09-20 16:06:16,-1091786391 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5088e90>
+2026-09-20 16:06:16,-1091786391 | INFO | 947988 - Starting Finetuning with 1 epochs
+2026-09-20 16:06:54,-1091747473 | INFO | 947988 - Finetuning - epoch = 0 ---> var_loss = 0.3046
+2026-09-20 16:06:57,-1091744831 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8543351417750026 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c38f0>
+2026-09-20 16:07:00,-1091742345 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72b40>
+2026-09-20 16:07:00,-1091741777 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8591909882232462 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c12e0>
+2026-09-20 16:07:01,-1091741263 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72b40>
+2026-09-20 16:07:10,-1091731899 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8580818965517242 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c0f20>
+2026-09-20 16:07:19,-1091722836 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72b40>
+2026-09-20 16:07:25,-1091717296 | INFO | 947988 - Adaptive Unlearning Score: 0.9963900583475442
+2026-09-20 16:07:27,-1091714773 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7913953913604121 of <erasure.model.TorchModel.TorchModel object at 0xee67e0147b90>
+2026-09-20 16:07:30,-1091712336 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72b40>
+2026-09-20 16:07:30,-1091711776 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8016347153560197 of <erasure.model.TorchModel.TorchModel object at 0xee67c031ea50>
+2026-09-20 16:07:31,-1091711282 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72b40>
+2026-09-20 16:07:31,-1091711243 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:07:34,-1091707828 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:07:34,-1091707828 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:07:34,-1091707827 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:07:34,-1091707811 | INFO | 947988 - Creating attack model
+2026-09-20 16:07:34,-1091707794 | INFO | 947988 - UMIA accuracy: 0.500672
+2026-09-20 16:07:34,-1091707793 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:07:35,-1091707430 | INFO | 947988 - [92m####		 Evaluating Unlearner BadTeaching 		####[0m
+2026-09-20 16:07:35,-1091707393 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e508a270>
+2026-09-20 16:07:35,-1091707393 | INFO | 947988 - Starting BadTeaching with 1 epochs
+2026-09-20 16:07:35,-1091707393 | INFO | 947988 - Instantiating: erasure.model.classifiers.standard_classifier.AdultNN
+2026-09-20 16:07:35,-1091707392 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 16:07:35,-1091707392 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 16:07:35,-1091707379 | INFO | 947988 - TorchModel trained on cuda in: 0.0029146671295166016 secs
+2026-09-20 16:07:35,-1091707379 | INFO | 947988 - Created Configurable: erasure.model.TorchModel.TorchModel
+2026-09-20 16:07:35,-1091707373 | INFO | 947988 - Number of steps per epoch: 611
+2026-09-20 16:08:44,-1091638083 | INFO | 947988 - Epoch 0 Unlearning Loss 0.039187654852867126
+2026-09-20 16:08:46,-1091635489 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8549493295117208 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c43e0>
+2026-09-20 16:08:49,-1091632956 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdcd40>
+2026-09-20 16:08:50,-1091632398 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8561187916026626 of <erasure.model.TorchModel.TorchModel object at 0xee67c0335220>
+2026-09-20 16:08:50,-1091631889 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdcd40>
+2026-09-20 16:08:59,-1091622682 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8568157327586207 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf09b0>
+2026-09-20 16:09:09,-1091613302 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdcd40>
+2026-09-20 16:09:14,-1091607695 | INFO | 947988 - Adaptive Unlearning Score: 1.000672314872456
+2026-09-20 16:09:17,-1091605098 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7935340058778049 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b58d10>
+2026-09-20 16:09:19,-1091602613 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdcd40>
+2026-09-20 16:09:20,-1091602038 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.798244765895872 of <erasure.model.TorchModel.TorchModel object at 0xee67c037cb00>
+2026-09-20 16:09:20,-1091601554 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bdcd40>
+2026-09-20 16:09:20,-1091601515 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:09:24,-1091598113 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:09:24,-1091598113 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:09:24,-1091598112 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:09:24,-1091598096 | INFO | 947988 - Creating attack model
+2026-09-20 16:09:24,-1091598078 | INFO | 947988 - UMIA accuracy: 0.49824
+2026-09-20 16:09:24,-1091598078 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:09:24,-1091597697 | INFO | 947988 - [92m####		 Evaluating Unlearner BadTeaching 		####[0m
+2026-09-20 16:09:24,-1091597659 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e508b800>
+2026-09-20 16:09:24,-1091597659 | INFO | 947988 - Starting BadTeaching with 1 epochs
+2026-09-20 16:09:24,-1091597658 | INFO | 947988 - Instantiating: erasure.model.classifiers.standard_classifier.AdultNN
+2026-09-20 16:09:24,-1091597657 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 16:09:24,-1091597657 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 16:09:24,-1091597643 | INFO | 947988 - TorchModel trained on cuda in: 0.0028553009033203125 secs
+2026-09-20 16:09:24,-1091597643 | INFO | 947988 - Created Configurable: erasure.model.TorchModel.TorchModel
+2026-09-20 16:09:24,-1091597638 | INFO | 947988 - Number of steps per epoch: 611
+2026-09-20 16:10:34,-1091527905 | INFO | 947988 - Epoch 0 Unlearning Loss 0.04005075618624687
+2026-09-20 16:10:36,-1091525481 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8540280479066434 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:10:39,-1091523104 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177230>
+2026-09-20 16:10:39,-1091522580 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.855094726062468 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c7620>
+2026-09-20 16:10:40,-1091522073 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177230>
+2026-09-20 16:10:49,-1091513114 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8585129310344828 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c6f90>
+2026-09-20 16:10:58,-1091503986 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177230>
+2026-09-20 16:11:04,-1091498346 | INFO | 947988 - Adaptive Unlearning Score: 0.9998547583753209
+2026-09-20 16:11:06,-1091495830 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7917254136429018 of <erasure.model.TorchModel.TorchModel object at 0xee67c037deb0>
+2026-09-20 16:11:09,-1091493265 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177230>
+2026-09-20 16:11:09,-1091492691 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7968087855819636 of <erasure.model.TorchModel.TorchModel object at 0xee67e02cea80>
+2026-09-20 16:11:10,-1091492148 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e0177230>
+2026-09-20 16:11:10,-1091492112 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:11:13,-1091488634 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:11:13,-1091488633 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:11:13,-1091488633 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:11:13,-1091488616 | INFO | 947988 - Creating attack model
+2026-09-20 16:11:13,-1091488599 | INFO | 947988 - UMIA accuracy: 0.4995200000000001
+2026-09-20 16:11:13,-1091488599 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:11:14,-1091488187 | INFO | 947988 - [92m####		 Evaluating Unlearner BadTeaching 		####[0m
+2026-09-20 16:11:14,-1091488148 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e50d4dd0>
+2026-09-20 16:11:14,-1091488148 | INFO | 947988 - Starting BadTeaching with 1 epochs
+2026-09-20 16:11:14,-1091488148 | INFO | 947988 - Instantiating: erasure.model.classifiers.standard_classifier.AdultNN
+2026-09-20 16:11:14,-1091488147 | INFO | 947988 - Instantiating: torch.optim.Adam
+2026-09-20 16:11:14,-1091488147 | INFO | 947988 - Instantiating: torch.nn.CrossEntropyLoss
+2026-09-20 16:11:14,-1091488135 | INFO | 947988 - TorchModel trained on cuda in: 0.0026633739471435547 secs
+2026-09-20 16:11:14,-1091488134 | INFO | 947988 - Created Configurable: erasure.model.TorchModel.TorchModel
+2026-09-20 16:11:14,-1091488130 | INFO | 947988 - Number of steps per epoch: 611
+2026-09-20 16:12:23,-1091419049 | INFO | 947988 - Epoch 0 Unlearning Loss 0.050645336508750916
+2026-09-20 16:12:25,-1091416585 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8516736615825571 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b38440>
+2026-09-20 16:12:28,-1091414148 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c05af530>
+2026-09-20 16:12:28,-1091413659 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8509984639016898 of <erasure.model.TorchModel.TorchModel object at 0xee67c031f590>
+2026-09-20 16:12:29,-1091413134 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c05af530>
+2026-09-20 16:12:38,-1091404069 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8569504310344828 of <erasure.model.TorchModel.TorchModel object at 0xee67c031e180>
+2026-09-20 16:12:47,-1091395033 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c05af530>
+2026-09-20 16:12:52,-1091389557 | INFO | 947988 - Adaptive Unlearning Score: 0.9978931201605049
+2026-09-20 16:12:55,-1091387086 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7943395223921894 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7e90>
+2026-09-20 16:12:57,-1091384654 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c05af530>
+2026-09-20 16:12:58,-1091384106 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7971848990051649 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c78f0>
+2026-09-20 16:12:58,-1091383614 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c05af530>
+2026-09-20 16:12:58,-1091383575 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:13:02,-1091380304 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:13:02,-1091380304 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:13:02,-1091380303 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:13:02,-1091380287 | INFO | 947988 - Creating attack model
+2026-09-20 16:13:02,-1091380273 | INFO | 947988 - UMIA accuracy: 0.49580799999999997
+2026-09-20 16:13:02,-1091380273 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:13:02,-1091379833 | INFO | 947988 - [92m####		 Evaluating Unlearner Scrub 		####[0m
+2026-09-20 16:13:02,-1091379797 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e50d6120>
+2026-09-20 16:13:02,-1091379797 | INFO | 947988 - Starting scrub with 1 epochs
+~/envs/erasure/lib/python3.12/site-packages/torch/nn/_reduction.py:60: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  return get_enum(legacy_get_string(size_average, reduce, emit_warning))
+2026-09-20 16:13:41,-1091341299 | INFO | 947988 - scrub - epoch = 0 ---> loss_retain = 0.3067 - loss_forget = -0.0000
+2026-09-20 16:13:43,-1091338766 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8509571092230526 of <erasure.model.TorchModel.TorchModel object at 0xee67c054a720>
+2026-09-20 16:13:46,-1091336323 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b46b0>
+2026-09-20 16:13:46,-1091335775 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8545826932923707 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be0ec0>
+2026-09-20 16:13:47,-1091335263 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b46b0>
+2026-09-20 16:13:56,-1091325883 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.857489224137931 of <erasure.model.TorchModel.TorchModel object at 0xee67c031fe00>
+2026-09-20 16:14:06,-1091316384 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b46b0>
+2026-09-20 16:14:11,-1091310770 | INFO | 947988 - Adaptive Unlearning Score: 0.9942456218339757
+2026-09-20 16:14:14,-1091308147 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7933769591737858 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c3dd0>
+2026-09-20 16:14:16,-1091305627 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b46b0>
+2026-09-20 16:14:17,-1091305044 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8016356904977169 of <erasure.model.TorchModel.TorchModel object at 0xee67e0174110>
+2026-09-20 16:14:17,-1091304535 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b46b0>
+2026-09-20 16:14:17,-1091304495 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:14:21,-1091301102 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:14:21,-1091301102 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:14:21,-1091301101 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:14:21,-1091301083 | INFO | 947988 - Creating attack model
+2026-09-20 16:14:21,-1091301067 | INFO | 947988 - UMIA accuracy: 0.49817599999999995
+2026-09-20 16:14:21,-1091301067 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:14:21,-1091300602 | INFO | 947988 - [92m####		 Evaluating Unlearner Scrub 		####[0m
+2026-09-20 16:14:21,-1091300564 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e50d76e0>
+2026-09-20 16:14:21,-1091300564 | INFO | 947988 - Starting scrub with 1 epochs
+~/envs/erasure/lib/python3.12/site-packages/torch/nn/_reduction.py:60: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  return get_enum(legacy_get_string(size_average, reduce, emit_warning))
+2026-09-20 16:15:00,-1091261870 | INFO | 947988 - scrub - epoch = 0 ---> loss_retain = 0.3039 - loss_forget = -0.0000
+2026-09-20 16:15:03,-1091259383 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8551540587572934 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c7e00>
+2026-09-20 16:15:05,-1091256905 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336240>
+2026-09-20 16:15:06,-1091256393 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8581669226830517 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c6d80>
+2026-09-20 16:15:06,-1091255878 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336240>
+2026-09-20 16:15:15,-1091246742 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8579471982758621 of <erasure.model.TorchModel.TorchModel object at 0xee67a049ac60>
+2026-09-20 16:15:24,-1091237679 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336240>
+2026-09-20 16:15:30,-1091232320 | INFO | 947988 - Adaptive Unlearning Score: 0.9990373289269175
+2026-09-20 16:15:32,-1091229837 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7936285085180969 of <erasure.model.TorchModel.TorchModel object at 0xee67a05504d0>
+2026-09-20 16:15:34,-1091227438 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336240>
+2026-09-20 16:15:35,-1091226906 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8008100430611527 of <erasure.model.TorchModel.TorchModel object at 0xee67c037ddf0>
+2026-09-20 16:15:36,-1091226423 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336240>
+2026-09-20 16:15:36,-1091226383 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:15:39,-1091223032 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:15:39,-1091223031 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:15:39,-1091223031 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:15:39,-1091223014 | INFO | 947988 - Creating attack model
+2026-09-20 16:15:39,-1091222999 | INFO | 947988 - UMIA accuracy: 0.49798400000000004
+2026-09-20 16:15:39,-1091222999 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:15:40,-1091222428 | INFO | 947988 - [92m####		 Evaluating Unlearner Scrub 		####[0m
+2026-09-20 16:15:40,-1091222390 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e50d7a10>
+2026-09-20 16:15:40,-1091222390 | INFO | 947988 - Starting scrub with 1 epochs
+~/envs/erasure/lib/python3.12/site-packages/torch/nn/_reduction.py:60: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+  return get_enum(legacy_get_string(size_average, reduce, emit_warning))
+2026-09-20 16:16:18,-1091183864 | INFO | 947988 - scrub - epoch = 0 ---> loss_retain = 0.3044 - loss_forget = -0.0000
+2026-09-20 16:16:21,-1091181389 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8543351417750026 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c1760>
+2026-09-20 16:16:23,-1091179004 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e01778f0>
+2026-09-20 16:16:24,-1091178419 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8602150537634409 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c39e0>
+2026-09-20 16:16:24,-1091177913 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e01778f0>
+2026-09-20 16:16:33,-1091168625 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.858135775862069 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c1790>
+2026-09-20 16:16:42,-1091159683 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e01778f0>
+2026-09-20 16:16:48,-1091154336 | INFO | 947988 - Adaptive Unlearning Score: 0.9953756542311232
+2026-09-20 16:16:50,-1091151869 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7903115466233729 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c0e00>
+2026-09-20 16:16:53,-1091149410 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e01778f0>
+2026-09-20 16:16:53,-1091148866 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8027705468848549 of <erasure.model.TorchModel.TorchModel object at 0xee67a0553470>
+2026-09-20 16:16:54,-1091148372 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e01778f0>
+2026-09-20 16:16:54,-1091148332 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:16:57,-1091145032 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:16:57,-1091145032 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:16:57,-1091145031 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:16:57,-1091145010 | INFO | 947988 - Creating attack model
+2026-09-20 16:16:57,-1091144987 | INFO | 947988 - UMIA accuracy: 0.49856
+2026-09-20 16:16:57,-1091144987 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:16:57,-1091144502 | INFO | 947988 - [92m####		 Evaluating Unlearner FisherForgetting 		####[0m
+2026-09-20 16:16:57,-1091144463 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5130ce0>
+2026-09-20 16:16:57,-1091144463 | INFO | 947988 - Starting Fisher Forgetting
+2026-09-20 16:16:57,-1091144460 | INFO | 947988 - Computing Fisher Information Matrix
+
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  0%|          | 1/1000 [00:00<02:17,  7.28it/s]
+  2%|▏         | 16/1000 [00:00<00:12, 79.97it/s]
+  3%|▎         | 28/1000 [00:00<00:10, 94.92it/s]
+  4%|▍         | 39/1000 [00:00<00:09, 100.49it/s]
+  5%|▌         | 51/1000 [00:00<00:09, 104.01it/s]
+  6%|▋         | 64/1000 [00:00<00:08, 109.53it/s]
+  9%|▊         | 86/1000 [00:00<00:06, 141.65it/s]
+ 10%|█         | 101/1000 [00:00<00:06, 130.83it/s]
+ 12%|█▏        | 115/1000 [00:01<00:06, 129.52it/s]
+ 13%|█▎        | 133/1000 [00:01<00:06, 141.42it/s]
+ 15%|█▍        | 148/1000 [00:01<00:06, 136.69it/s]
+ 16%|█▋        | 163/1000 [00:01<00:06, 139.40it/s]
+ 18%|█▊        | 184/1000 [00:01<00:05, 156.49it/s]
+ 20%|██        | 200/1000 [00:01<00:05, 140.29it/s]
+ 22%|██▏       | 218/1000 [00:01<00:05, 150.80it/s]
+ 24%|██▎       | 235/1000 [00:01<00:04, 153.24it/s]
+ 25%|██▌       | 251/1000 [00:01<00:05, 138.86it/s]
+ 27%|██▋       | 274/1000 [00:02<00:04, 162.25it/s]
+ 29%|██▉       | 291/1000 [00:02<00:04, 151.63it/s]
+ 31%|███       | 307/1000 [00:02<00:04, 141.72it/s]
+ 33%|███▎      | 331/1000 [00:02<00:04, 165.83it/s]
+ 35%|███▍      | 349/1000 [00:02<00:04, 148.14it/s]
+ 36%|███▋      | 365/1000 [00:02<00:04, 145.20it/s]
+ 38%|███▊      | 384/1000 [00:02<00:03, 154.48it/s]
+ 40%|████      | 400/1000 [00:02<00:04, 140.37it/s]
+ 42%|████▏     | 421/1000 [00:03<00:03, 158.05it/s]
+ 44%|████▍     | 438/1000 [00:03<00:03, 147.86it/s]
+ 45%|████▌     | 454/1000 [00:03<00:03, 139.83it/s]
+ 48%|████▊     | 478/1000 [00:03<00:03, 162.56it/s]
+ 50%|████▉     | 495/1000 [00:03<00:03, 143.30it/s]
+ 51%|█████     | 511/1000 [00:03<00:03, 137.79it/s]
+ 53%|█████▎    | 526/1000 [00:03<00:03, 126.55it/s]
+ 54%|█████▍    | 540/1000 [00:03<00:03, 118.52it/s]
+ 55%|█████▌    | 554/1000 [00:04<00:03, 121.60it/s]
+ 57%|█████▋    | 567/1000 [00:04<00:03, 115.65it/s]
+ 58%|█████▊    | 579/1000 [00:04<00:03, 113.87it/s]
+ 59%|█████▉    | 592/1000 [00:04<00:03, 115.71it/s]
+ 60%|██████    | 604/1000 [00:04<00:03, 109.59it/s]
+ 62%|██████▏   | 616/1000 [00:04<00:03, 110.98it/s]
+ 63%|██████▎   | 628/1000 [00:04<00:03, 111.27it/s]
+ 64%|██████▍   | 640/1000 [00:04<00:03, 105.65it/s]
+ 65%|██████▌   | 652/1000 [00:04<00:03, 109.25it/s]
+ 66%|██████▋   | 664/1000 [00:05<00:03, 111.15it/s]
+ 68%|██████▊   | 676/1000 [00:05<00:02, 108.34it/s]
+ 69%|██████▉   | 688/1000 [00:05<00:02, 109.95it/s]
+ 70%|███████   | 700/1000 [00:05<00:02, 109.46it/s]
+ 71%|███████   | 711/1000 [00:05<00:02, 106.27it/s]
+ 72%|███████▏  | 723/1000 [00:05<00:02, 108.59it/s]
+ 74%|███████▎  | 735/1000 [00:05<00:02, 111.06it/s]
+ 75%|███████▍  | 747/1000 [00:05<00:02, 106.05it/s]
+ 76%|███████▌  | 759/1000 [00:05<00:02, 108.52it/s]
+ 77%|███████▋  | 770/1000 [00:06<00:02, 108.46it/s]
+ 78%|███████▊  | 781/1000 [00:06<00:02, 105.77it/s]
+ 79%|███████▉  | 792/1000 [00:06<00:01, 105.73it/s]
+ 80%|████████  | 805/1000 [00:06<00:01, 110.65it/s]
+ 82%|████████▏ | 817/1000 [00:06<00:01, 107.27it/s]
+ 83%|████████▎ | 829/1000 [00:06<00:01, 109.19it/s]
+ 84%|████████▍ | 842/1000 [00:06<00:01, 113.89it/s]
+ 86%|████████▌ | 855/1000 [00:06<00:01, 118.46it/s]
+ 87%|████████▋ | 867/1000 [00:06<00:01, 118.13it/s]
+ 89%|████████▉ | 888/1000 [00:07<00:00, 143.41it/s]
+ 90%|█████████ | 903/1000 [00:07<00:00, 134.99it/s]
+ 92%|█████████▏| 918/1000 [00:07<00:00, 138.10it/s]
+ 94%|█████████▎| 936/1000 [00:07<00:00, 147.61it/s]
+ 95%|█████████▌| 951/1000 [00:07<00:00, 134.01it/s]
+ 96%|█████████▋| 965/1000 [00:07<00:00, 129.30it/s]
+ 98%|█████████▊| 979/1000 [00:07<00:00, 129.33it/s]
+100%|█████████▉| 997/1000 [00:07<00:00, 140.02it/s]
+100%|█████████▉| 999/1000 [00:07<00:00, 127.11it/s]
+2026-09-20 16:17:05,-1091136596 | INFO | 947988 - Applying Fisher noise for selective forgetting
+2026-09-20 16:17:08,-1091134060 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8526973078104207 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9d850>
+2026-09-20 16:17:10,-1091131656 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b620>
+2026-09-20 16:17:11,-1091131133 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8576548899129545 of <erasure.model.TorchModel.TorchModel object at 0xee67e02b73e0>
+2026-09-20 16:17:11,-1091130637 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b620>
+2026-09-20 16:17:20,-1091121693 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.854364224137931 of <erasure.model.TorchModel.TorchModel object at 0xee67e01457c0>
+2026-09-20 16:17:29,-1091112839 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b620>
+2026-09-20 16:17:34,-1091107700 | INFO | 947988 - Adaptive Unlearning Score: 0.9946594356923497
+2026-09-20 16:17:36,-1091105888 | INFO | 947988 - f1_macro of "test" on unlearned: 0.778737193538831 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be0bc0>
+2026-09-20 16:17:38,-1091104120 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b620>
+2026-09-20 16:17:38,-1091103714 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7888224897548954 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f2c0>
+2026-09-20 16:17:39,-1091103353 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5b620>
+2026-09-20 16:17:39,-1091103319 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:17:41,-1091101302 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:17:41,-1091101302 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:17:41,-1091101301 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:17:41,-1091101287 | INFO | 947988 - Creating attack model
+2026-09-20 16:17:41,-1091101275 | INFO | 947988 - UMIA accuracy: 0.49664
+2026-09-20 16:17:41,-1091101275 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:17:41,-1091101143 | INFO | 947988 - [92m####		 Evaluating Unlearner FisherForgetting 		####[0m
+2026-09-20 16:17:41,-1091101108 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5133200>
+2026-09-20 16:17:41,-1091101108 | INFO | 947988 - Starting Fisher Forgetting
+2026-09-20 16:17:41,-1091101107 | INFO | 947988 - Computing Fisher Information Matrix
+
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  3%|▎         | 31/1000 [00:00<00:03, 298.79it/s]
+  6%|▌         | 61/1000 [00:00<00:03, 261.23it/s]
+  9%|▉         | 88/1000 [00:00<00:03, 242.50it/s]
+ 11%|█▏        | 114/1000 [00:00<00:03, 246.82it/s]
+ 14%|█▍        | 139/1000 [00:00<00:03, 219.87it/s]
+ 17%|█▋        | 167/1000 [00:00<00:03, 236.61it/s]
+ 20%|█▉        | 197/1000 [00:00<00:03, 253.64it/s]
+ 22%|██▏       | 224/1000 [00:00<00:03, 257.73it/s]
+ 25%|██▌       | 251/1000 [00:01<00:02, 251.87it/s]
+ 28%|██▊       | 278/1000 [00:01<00:02, 256.55it/s]
+ 30%|███       | 304/1000 [00:01<00:02, 248.66it/s]
+ 33%|███▎      | 330/1000 [00:01<00:02, 245.90it/s]
+ 36%|███▌      | 356/1000 [00:01<00:02, 247.49it/s]
+ 38%|███▊      | 381/1000 [00:01<00:02, 247.47it/s]
+ 41%|████      | 406/1000 [00:01<00:02, 247.85it/s]
+ 43%|████▎     | 432/1000 [00:01<00:02, 247.62it/s]
+ 46%|████▌     | 457/1000 [00:01<00:02, 243.78it/s]
+ 48%|████▊     | 485/1000 [00:01<00:02, 253.74it/s]
+ 51%|█████     | 511/1000 [00:02<00:01, 249.22it/s]
+ 54%|█████▍    | 538/1000 [00:02<00:01, 253.45it/s]
+ 56%|█████▋    | 564/1000 [00:02<00:01, 253.75it/s]
+ 59%|█████▉    | 590/1000 [00:02<00:01, 253.02it/s]
+ 62%|██████▏   | 616/1000 [00:02<00:01, 250.80it/s]
+ 64%|██████▍   | 642/1000 [00:02<00:01, 247.40it/s]
+ 67%|██████▋   | 667/1000 [00:02<00:01, 243.33it/s]
+ 69%|██████▉   | 694/1000 [00:02<00:01, 248.68it/s]
+ 72%|███████▏  | 719/1000 [00:02<00:01, 243.37it/s]
+ 75%|███████▍  | 747/1000 [00:03<00:01, 251.06it/s]
+ 78%|███████▊  | 775/1000 [00:03<00:00, 258.25it/s]
+ 80%|████████  | 805/1000 [00:03<00:00, 267.18it/s]
+ 83%|████████▎ | 832/1000 [00:03<00:00, 251.41it/s]
+ 86%|████████▌ | 858/1000 [00:03<00:00, 253.51it/s]
+ 88%|████████▊ | 884/1000 [00:03<00:00, 246.37it/s]
+ 91%|█████████▏| 913/1000 [00:03<00:00, 255.67it/s]
+ 94%|█████████▍| 942/1000 [00:03<00:00, 263.94it/s]
+ 97%|█████████▋| 970/1000 [00:03<00:00, 267.93it/s]
+100%|█████████▉| 999/1000 [00:03<00:00, 253.04it/s]
+2026-09-20 16:17:45,-1091097157 | INFO | 947988 - Applying Fisher noise for selective forgetting
+2026-09-20 16:17:47,-1091095308 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8492169106356843 of <erasure.model.TorchModel.TorchModel object at 0xee67a05d0200>
+2026-09-20 16:17:48,-1091093537 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c74d0>
+2026-09-20 16:17:49,-1091093131 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.855094726062468 of <erasure.model.TorchModel.TorchModel object at 0xee67e01765d0>
+2026-09-20 16:17:49,-1091092752 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c74d0>
+2026-09-20 16:17:56,-1091086124 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8557920258620689 of <erasure.model.TorchModel.TorchModel object at 0xee67a05d1df0>
+2026-09-20 16:18:03,-1091079342 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c74d0>
+2026-09-20 16:18:07,-1091075253 | INFO | 947988 - Adaptive Unlearning Score: 0.9902894059866293
+2026-09-20 16:18:09,-1091073391 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7861881879964687 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c68a0>
+2026-09-20 16:18:10,-1091071549 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c74d0>
+2026-09-20 16:18:11,-1091071147 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7961805636224241 of <erasure.model.TorchModel.TorchModel object at 0xee67a0499280>
+2026-09-20 16:18:11,-1091070773 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c74d0>
+2026-09-20 16:18:11,-1091070738 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:18:13,-1091068558 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:18:13,-1091068558 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:18:13,-1091068558 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:18:13,-1091068544 | INFO | 947988 - Creating attack model
+2026-09-20 16:18:13,-1091068531 | INFO | 947988 - UMIA accuracy: 0.502464
+2026-09-20 16:18:13,-1091068531 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:18:14,-1091068399 | INFO | 947988 - [92m####		 Evaluating Unlearner FisherForgetting 		####[0m
+2026-09-20 16:18:14,-1091068364 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e5133890>
+2026-09-20 16:18:14,-1091068363 | INFO | 947988 - Starting Fisher Forgetting
+2026-09-20 16:18:14,-1091068362 | INFO | 947988 - Computing Fisher Information Matrix
+
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  2%|▏         | 22/1000 [00:00<00:04, 218.79it/s]
+  5%|▍         | 47/1000 [00:00<00:04, 236.83it/s]
+  7%|▋         | 73/1000 [00:00<00:03, 246.04it/s]
+ 10%|█         | 102/1000 [00:00<00:03, 261.25it/s]
+ 13%|█▎        | 129/1000 [00:00<00:03, 258.86it/s]
+ 16%|█▌        | 155/1000 [00:00<00:03, 237.78it/s]
+ 18%|█▊        | 180/1000 [00:00<00:03, 234.22it/s]
+ 20%|██        | 204/1000 [00:00<00:03, 230.59it/s]
+ 23%|██▎       | 228/1000 [00:01<00:03, 205.94it/s]
+ 25%|██▌       | 250/1000 [00:01<00:03, 192.12it/s]
+ 27%|██▋       | 270/1000 [00:01<00:03, 188.91it/s]
+ 29%|██▉       | 293/1000 [00:01<00:03, 197.86it/s]
+ 32%|███▏      | 315/1000 [00:01<00:03, 202.18it/s]
+ 34%|███▎      | 336/1000 [00:01<00:03, 199.96it/s]
+ 36%|███▌      | 359/1000 [00:01<00:03, 206.19it/s]
+ 38%|███▊      | 380/1000 [00:01<00:03, 206.00it/s]
+ 41%|████      | 407/1000 [00:01<00:02, 223.87it/s]
+ 43%|████▎     | 430/1000 [00:01<00:02, 212.40it/s]
+ 45%|████▌     | 452/1000 [00:02<00:02, 195.62it/s]
+ 47%|████▋     | 472/1000 [00:02<00:02, 195.54it/s]
+ 50%|████▉     | 496/1000 [00:02<00:02, 206.99it/s]
+ 52%|█████▏    | 523/1000 [00:02<00:02, 224.35it/s]
+ 55%|█████▌    | 552/1000 [00:02<00:01, 240.48it/s]
+ 58%|█████▊    | 577/1000 [00:02<00:01, 222.59it/s]
+ 60%|██████    | 600/1000 [00:02<00:01, 205.98it/s]
+ 62%|██████▏   | 623/1000 [00:02<00:01, 211.07it/s]
+ 65%|██████▌   | 652/1000 [00:03<00:01, 231.59it/s]
+ 68%|██████▊   | 678/1000 [00:03<00:01, 237.65it/s]
+ 71%|███████   | 708/1000 [00:03<00:01, 254.43it/s]
+ 73%|███████▎  | 734/1000 [00:03<00:01, 255.35it/s]
+ 76%|███████▌  | 761/1000 [00:03<00:00, 259.20it/s]
+ 79%|███████▉  | 788/1000 [00:03<00:00, 253.10it/s]
+ 82%|████████▏ | 816/1000 [00:03<00:00, 260.26it/s]
+ 85%|████████▍ | 847/1000 [00:03<00:00, 273.83it/s]
+ 88%|████████▊ | 875/1000 [00:03<00:00, 265.21it/s]
+ 90%|█████████ | 903/1000 [00:03<00:00, 267.14it/s]
+ 93%|█████████▎| 931/1000 [00:04<00:00, 268.61it/s]
+ 96%|█████████▌| 958/1000 [00:04<00:00, 267.14it/s]
+ 98%|█████████▊| 985/1000 [00:04<00:00, 266.80it/s]
+100%|█████████▉| 999/1000 [00:04<00:00, 232.07it/s]
+2026-09-20 16:18:18,-1091064056 | INFO | 947988 - Applying Fisher noise for selective forgetting
+2026-09-20 16:18:20,-1091062204 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8515712969597707 of <erasure.model.TorchModel.TorchModel object at 0xee67a0498f80>
+2026-09-20 16:18:22,-1091060393 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f440>
+2026-09-20 16:18:22,-1091059993 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8591909882232462 of <erasure.model.TorchModel.TorchModel object at 0xee67a0498920>
+2026-09-20 16:18:22,-1091059624 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f440>
+2026-09-20 16:18:29,-1091052718 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8528286637931034 of <erasure.model.TorchModel.TorchModel object at 0xee67a049b5c0>
+2026-09-20 16:18:36,-1091046191 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f440>
+2026-09-20 16:18:40,-1091042371 | INFO | 947988 - Adaptive Unlearning Score: 0.9909140713657639
+2026-09-20 16:18:41,-1091040593 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7659330225450403 of <erasure.model.TorchModel.TorchModel object at 0xee67a049b350>
+2026-09-20 16:18:43,-1091038861 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f440>
+2026-09-20 16:18:43,-1091038480 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.7816158414971986 of <erasure.model.TorchModel.TorchModel object at 0xee67a0499400>
+2026-09-20 16:18:44,-1091038128 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c037f440>
+2026-09-20 16:18:44,-1091038094 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:18:46,-1091036113 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:18:46,-1091036113 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:18:46,-1091036112 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:18:46,-1091036099 | INFO | 947988 - Creating attack model
+2026-09-20 16:18:46,-1091036083 | INFO | 947988 - UMIA accuracy: 0.498752
+2026-09-20 16:18:46,-1091036083 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:18:46,-1091035950 | INFO | 947988 - [92m####		 Evaluating Unlearner SelectiveSynapticDampening 		####[0m
+2026-09-20 16:18:46,-1091035915 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e4f80b00>
+2026-09-20 16:18:46,-1091035915 | INFO | 947988 - Starting SSD
+2026-09-20 16:18:46,-1091035915 | INFO | 947988 - TRAINING WITH 39073 samples
+{'lower_bound': 1, 'exponent': 1, 'magnitude_diff': None, 'min_layer': -1, 'max_layer': -1, 'forget_threshold': 1, 'dampening_constant': 0.1, 'selection_weighting': 50}
+2026-09-20 16:19:20,-1091001506 | INFO | 947988 - SSD completed
+2026-09-20 16:19:22,-1090999774 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c0233320>
+2026-09-20 16:19:24,-1090997949 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:19:24,-1090997535 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c0230dd0>
+2026-09-20 16:19:25,-1090997173 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:19:31,-1090990551 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c0233710>
+2026-09-20 16:19:38,-1090983783 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:19:42,-1090979788 | INFO | 947988 - Adaptive Unlearning Score: 0.9995483426359417
+2026-09-20 16:19:44,-1090977993 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5ad50>
+2026-09-20 16:19:46,-1090976237 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:19:46,-1090975851 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0233ec0>
+2026-09-20 16:19:46,-1090975494 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e3c72180>
+2026-09-20 16:19:46,-1090975460 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:19:48,-1090973462 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:19:48,-1090973462 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:19:48,-1090973462 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:19:48,-1090973448 | INFO | 947988 - Creating attack model
+2026-09-20 16:19:48,-1090973433 | INFO | 947988 - UMIA accuracy: 0.49817600000000006
+2026-09-20 16:19:48,-1090973433 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:19:49,-1090973300 | INFO | 947988 - [92m####		 Evaluating Unlearner SelectiveSynapticDampening 		####[0m
+2026-09-20 16:19:49,-1090973264 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e4f830b0>
+2026-09-20 16:19:49,-1090973264 | INFO | 947988 - Starting SSD
+2026-09-20 16:19:49,-1090973264 | INFO | 947988 - TRAINING WITH 39073 samples
+{'lower_bound': 1, 'exponent': 1, 'magnitude_diff': None, 'min_layer': -1, 'max_layer': -1, 'forget_threshold': 1, 'dampening_constant': 0.1, 'selection_weighting': 50}
+2026-09-20 16:20:23,-1090939016 | INFO | 947988 - SSD completed
+2026-09-20 16:20:25,-1090937201 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67a05aecc0>
+2026-09-20 16:20:26,-1090935494 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336db0>
+2026-09-20 16:20:27,-1090935114 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67a05521e0>
+2026-09-20 16:20:27,-1090934765 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336db0>
+2026-09-20 16:20:34,-1090928098 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c05c7320>
+2026-09-20 16:20:40,-1090921506 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336db0>
+2026-09-20 16:20:44,-1090917654 | INFO | 947988 - Adaptive Unlearning Score: 0.9995483426359417
+2026-09-20 16:20:46,-1090915870 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c0781a90>
+2026-09-20 16:20:48,-1090914127 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336db0>
+2026-09-20 16:20:48,-1090913743 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0334fb0>
+2026-09-20 16:20:49,-1090913393 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0336db0>
+2026-09-20 16:20:49,-1090913358 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:20:51,-1090911383 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:20:51,-1090911383 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:20:51,-1090911383 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:20:51,-1090911369 | INFO | 947988 - Creating attack model
+2026-09-20 16:20:51,-1090911355 | INFO | 947988 - UMIA accuracy: 0.499136
+2026-09-20 16:20:51,-1090911354 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:20:51,-1090911218 | INFO | 947988 - [92m####		 Evaluating Unlearner SelectiveSynapticDampening 		####[0m
+2026-09-20 16:20:51,-1090911183 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3c73a70>
+2026-09-20 16:20:51,-1090911183 | INFO | 947988 - Starting SSD
+2026-09-20 16:20:51,-1090911183 | INFO | 947988 - TRAINING WITH 39073 samples
+{'lower_bound': 1, 'exponent': 1, 'magnitude_diff': None, 'min_layer': -1, 'max_layer': -1, 'forget_threshold': 1, 'dampening_constant': 0.1, 'selection_weighting': 50}
+2026-09-20 16:21:25,-1090877033 | INFO | 947988 - SSD completed
+2026-09-20 16:21:27,-1090875265 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7770>
+2026-09-20 16:21:28,-1090873541 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1940>
+2026-09-20 16:21:29,-1090873166 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c4920>
+2026-09-20 16:21:29,-1090872825 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1940>
+2026-09-20 16:21:36,-1090866219 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c5100>
+2026-09-20 16:21:42,-1090859720 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1940>
+2026-09-20 16:21:46,-1090855877 | INFO | 947988 - Adaptive Unlearning Score: 0.9995483426359417
+2026-09-20 16:21:48,-1090854093 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9f440>
+2026-09-20 16:21:50,-1090852373 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1940>
+2026-09-20 16:21:50,-1090851983 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c02c1c40>
+2026-09-20 16:21:50,-1090851645 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2be1940>
+2026-09-20 16:21:50,-1090851610 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:21:52,-1090849634 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:21:52,-1090849634 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:21:52,-1090849634 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:21:52,-1090849620 | INFO | 947988 - Creating attack model
+2026-09-20 16:21:52,-1090849603 | INFO | 947988 - UMIA accuracy: 0.49792
+2026-09-20 16:21:52,-1090849603 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:21:52,-1090849466 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:21:53,-1090849430 | INFO | 947988 - Execute Sub-Unlearner: SaliencyMapGeneration on <erasure.model.TorchModel.TorchModel object at 0xee67e3e06ae0>
+2026-09-20 16:21:53,-1090849430 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3e06ae0>
+2026-09-20 16:21:53,-1090849430 | INFO | 947988 - Starting Saliency Mask Generation
+2026-09-20 16:21:54,-1090847777 | INFO | 947988 - Execute Sub-Unlearner: SuccessiveRandomLabels on <erasure.model.TorchModel.TorchModel object at 0xee67e3e06ae0>
+2026-09-20 16:21:54,-1090847775 | INFO | 947988 - Loaded mask from saliency_maps/saliency_map
+2026-09-20 16:21:54,-1090847775 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3e06ae0>
+2026-09-20 16:21:54,-1090847775 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 16:22:27,-1090814561 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4159
+2026-09-20 16:22:29,-1090812897 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.852492578564848 of <erasure.model.TorchModel.TorchModel object at 0xee67a05acf50>
+2026-09-20 16:22:31,-1090811263 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5a2a0>
+2026-09-20 16:22:31,-1090810900 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67a05aff20>
+2026-09-20 16:22:31,-1090810564 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5a2a0>
+2026-09-20 16:22:38,-1090804428 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8578394396551724 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b3b9b0>
+2026-09-20 16:22:44,-1090798300 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5a2a0>
+2026-09-20 16:22:47,-1090794643 | INFO | 947988 - Adaptive Unlearning Score: 0.9983215523836708
+2026-09-20 16:22:49,-1090792996 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7929095784598866 of <erasure.model.TorchModel.TorchModel object at 0xee67a049b470>
+2026-09-20 16:22:51,-1090791386 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5a2a0>
+2026-09-20 16:22:51,-1090791025 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c0232db0>
+2026-09-20 16:22:51,-1090790704 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b5a2a0>
+2026-09-20 16:22:51,-1090790669 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:22:53,-1090788748 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:22:53,-1090788748 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:22:53,-1090788747 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:22:53,-1090788734 | INFO | 947988 - Creating attack model
+2026-09-20 16:22:53,-1090788720 | INFO | 947988 - UMIA accuracy: 0.49824
+2026-09-20 16:22:53,-1090788720 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:22:53,-1090788560 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:22:53,-1090788524 | INFO | 947988 - Execute Sub-Unlearner: SaliencyMapGeneration on <erasure.model.TorchModel.TorchModel object at 0xee67e3c8ac90>
+2026-09-20 16:22:53,-1090788523 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3c8ac90>
+2026-09-20 16:22:53,-1090788523 | INFO | 947988 - Starting Saliency Mask Generation
+2026-09-20 16:22:55,-1090786944 | INFO | 947988 - Execute Sub-Unlearner: SuccessiveRandomLabels on <erasure.model.TorchModel.TorchModel object at 0xee67e3c8ac90>
+2026-09-20 16:22:55,-1090786943 | INFO | 947988 - Loaded mask from saliency_maps/saliency_map
+2026-09-20 16:22:55,-1090786943 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e3c8ac90>
+2026-09-20 16:22:55,-1090786943 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 16:23:28,-1090753969 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4338
+2026-09-20 16:23:30,-1090752312 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8550516941345071 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9c6b0>
+2026-09-20 16:23:31,-1090750696 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7020>
+2026-09-20 16:23:32,-1090750325 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.8591909882232462 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9fbc0>
+2026-09-20 16:23:32,-1090749999 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7020>
+2026-09-20 16:23:38,-1090743868 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8586476293103448 of <erasure.model.TorchModel.TorchModel object at 0xee67e2b9caa0>
+2026-09-20 16:23:44,-1090737804 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7020>
+2026-09-20 16:23:48,-1090734176 | INFO | 947988 - Adaptive Unlearning Score: 0.9978146794287245
+2026-09-20 16:23:49,-1090732488 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7895174616661361 of <erasure.model.TorchModel.TorchModel object at 0xee67c031e480>
+2026-09-20 16:23:51,-1090730862 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7020>
+2026-09-20 16:23:51,-1090730503 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.8000737055463423 of <erasure.model.TorchModel.TorchModel object at 0xee67c031f320>
+2026-09-20 16:23:52,-1090730174 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67c06c7020>
+2026-09-20 16:23:52,-1090730139 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:23:54,-1090728211 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:23:54,-1090728211 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:23:54,-1090728211 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:23:54,-1090728198 | INFO | 947988 - Creating attack model
+2026-09-20 16:23:54,-1090728184 | INFO | 947988 - UMIA accuracy: 0.4976
+2026-09-20 16:23:54,-1090728184 | WARNING | 947988 - Cleaning evaluator cache...
+2026-09-20 16:23:54,-1090728047 | INFO | 947988 - [92m####		 Evaluating Unlearner Cascade 		####[0m
+2026-09-20 16:23:54,-1090728012 | INFO | 947988 - Execute Sub-Unlearner: SaliencyMapGeneration on <erasure.model.TorchModel.TorchModel object at 0xee67e2f387a0>
+2026-09-20 16:23:54,-1090728012 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e2f387a0>
+2026-09-20 16:23:54,-1090728012 | INFO | 947988 - Starting Saliency Mask Generation
+2026-09-20 16:23:55,-1090726435 | INFO | 947988 - Execute Sub-Unlearner: SuccessiveRandomLabels on <erasure.model.TorchModel.TorchModel object at 0xee67e2f387a0>
+2026-09-20 16:23:55,-1090726433 | INFO | 947988 - Loaded mask from saliency_maps/saliency_map
+2026-09-20 16:23:55,-1090726433 | INFO | 947988 - Unlearning copyed predictor: <erasure.model.TorchModel.TorchModel object at 0xee67e2f387a0>
+2026-09-20 16:23:55,-1090726433 | INFO | 947988 - Starting SRL with 1 epochs
+2026-09-20 16:24:29,-1090693398 | INFO | 947988 - SRL - epoch = 0 ---> var_loss = 0.4374
+2026-09-20 16:24:30,-1090691768 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on unlearned: 0.8540280479066434 of <erasure.model.TorchModel.TorchModel object at 0xee67a05d2fc0>
+2026-09-20 16:24:32,-1090690157 | INFO | 947988 - sklearn.metrics.accuracy_score of "test" on original: 0.8531067663015662 of <erasure.model.TorchModel.TorchModel object at 0xee67e0145ee0>
+2026-09-20 16:24:32,-1090689800 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on unlearned: 0.855094726062468 of <erasure.model.TorchModel.TorchModel object at 0xee67a05d1af0>
+2026-09-20 16:24:32,-1090689476 | INFO | 947988 - sklearn.metrics.accuracy_score of "forget" on original: 0.8535586277521762 of <erasure.model.TorchModel.TorchModel object at 0xee67e0145ee0>
+2026-09-20 16:24:39,-1090683274 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on unlearned: 0.8579471982758621 of <erasure.model.TorchModel.TorchModel object at 0xee67a05d2960>
+2026-09-20 16:24:45,-1090677079 | INFO | 947988 - sklearn.metrics.accuracy_score of "retain" on original: 0.8571120689655173 of <erasure.model.TorchModel.TorchModel object at 0xee67e0145ee0>
+2026-09-20 16:24:49,-1090673358 | INFO | 947988 - Adaptive Unlearning Score: 0.9998547583753209
+2026-09-20 16:24:50,-1090671649 | INFO | 947988 - f1_macro of "test" on unlearned: 0.7925848972033238 of <erasure.model.TorchModel.TorchModel object at 0xee67e2bf3320>
+2026-09-20 16:24:52,-1090669905 | INFO | 947988 - f1_macro of "test" on original: 0.7937718564121702 of <erasure.model.TorchModel.TorchModel object at 0xee67e0145ee0>
+2026-09-20 16:24:52,-1090669529 | INFO | 947988 - f1_macro of "forget" on unlearned: 0.798046598812832 of <erasure.model.TorchModel.TorchModel object at 0xee67a039ef60>
+2026-09-20 16:24:53,-1090669189 | INFO | 947988 - f1_macro of "forget" on original: 0.797585777030455 of <erasure.model.TorchModel.TorchModel object at 0xee67e0145ee0>
+2026-09-20 16:24:53,-1090669153 | INFO | 947988 - Creating attack dataset
+2026-09-20 16:24:55,-1090667126 | INFO | 947988 - Created Configurable: erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource
+2026-09-20 16:24:55,-1090667126 | INFO | 947988 - {'class': 'erasure.data.data_sources.TorchFileDataSource.TorchFileDataSource', 'parameters': {'path': 'resources/data/umia/umia.pt_0'}}
+2026-09-20 16:24:55,-1090667126 | INFO | 947988 - Instantiating: erasure.data.datasets.DataSplitter.DataSplitterPercentage
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Partition all has 3906 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Partition train has 1953 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Partition test has 1953 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - ['all', 'train', 'test']
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Dataset partitions summary:
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 -   all: 3906 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 -   train: 1953 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 -   test: 1953 samples
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Created Configurable: erasure.data.datasets.DatasetManager.DatasetManager
+2026-09-20 16:24:55,-1090667113 | INFO | 947988 - Creating attack model
+2026-09-20 16:24:55,-1090667099 | INFO | 947988 - UMIA accuracy: 0.49983999999999995
+2026-09-20 16:24:55,-1090667099 | WARNING | 947988 - Cleaning evaluator cache...
+~/ERASURE/run_adult.sh: line 9: 947988 Segmentation fault      (core dumped) python main.py "$CFG"
+
+real	68m20.727s
+user	60m29.351s
+sys	0m26.795s
+=== exit 139 at 2026-09-20T16:25:51+03:00 ===
